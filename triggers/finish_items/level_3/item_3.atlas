@@ -1,0 +1,37 @@
+images {
+  image: "/triggers/finish_items/level_3/images/key_04.png"
+}
+images {
+  image: "/triggers/finish_items/level_3/images/binoculars1.png"
+}
+images {
+  image: "/triggers/finish_items/level_3/images/binoculars2.png"
+}
+images {
+  image: "/triggers/finish_items/level_3/images/binoculars3.png"
+}
+images {
+  image: "/triggers/finish_items/level_3/images/binoculars4.png"
+}
+animations {
+  id: "binoculars"
+  images {
+    image: "/triggers/finish_items/level_3/images/binoculars1.png"
+  }
+  images {
+    image: "/triggers/finish_items/level_3/images/binoculars2.png"
+  }
+  images {
+    image: "/triggers/finish_items/level_3/images/binoculars3.png"
+  }
+  images {
+    image: "/triggers/finish_items/level_3/images/binoculars4.png"
+  }
+  playback: PLAYBACK_LOOP_FORWARD
+  fps: 4
+  flip_horizontal: 0
+  flip_vertical: 0
+}
+margin: 0
+extrude_borders: 0
+inner_padding: 0

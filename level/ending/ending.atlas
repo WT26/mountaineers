@@ -1,0 +1,21 @@
+images {
+  image: "/level/ending/images/answer_1.png"
+}
+images {
+  image: "/level/ending/images/answer_2.png"
+}
+images {
+  image: "/level/ending/images/answer_3.png"
+}
+images {
+  image: "/level/ending/images/intro_textbox.png"
+}
+images {
+  image: "/level/ending/images/intro_textbox.png"
+}
+images {
+  image: "/level/ending/images/level_end_textfade.png"
+}
+margin: 0
+extrude_borders: 0
+inner_padding: 0

@@ -1,0 +1,43 @@
+images {
+  image: "/triggers/finish_items/level_4/images/key_02.png"
+}
+images {
+  image: "/triggers/finish_items/level_4/images/carwreck1.png"
+}
+images {
+  image: "/triggers/finish_items/level_4/images/carwreck2.png"
+}
+images {
+  image: "/triggers/finish_items/level_4/images/carwreck3.png"
+}
+images {
+  image: "/triggers/finish_items/level_4/images/carwreck4.png"
+}
+images {
+  image: "/triggers/finish_items/level_4/images/carwreck5.png"
+}
+animations {
+  id: "carwreck"
+  images {
+    image: "/triggers/finish_items/level_4/images/carwreck1.png"
+  }
+  images {
+    image: "/triggers/finish_items/level_4/images/carwreck2.png"
+  }
+  images {
+    image: "/triggers/finish_items/level_4/images/carwreck3.png"
+  }
+  images {
+    image: "/triggers/finish_items/level_4/images/carwreck4.png"
+  }
+  images {
+    image: "/triggers/finish_items/level_4/images/carwreck5.png"
+  }
+  playback: PLAYBACK_LOOP_FORWARD
+  fps: 4
+  flip_horizontal: 0
+  flip_vertical: 0
+}
+margin: 0
+extrude_borders: 0
+inner_padding: 0

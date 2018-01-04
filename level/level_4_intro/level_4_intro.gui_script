@@ -1,0 +1,576 @@
+local input_enter = hash("proceed")
+local input_down = hash("down")
+local input_down2 = hash("down2")
+local input_jump = hash("jump2")
+local input_jump2 = hash("jump3")
+local input_choice1 = hash("choice1")
+local input_choice2 = hash("choice2")
+local input_choice3 = hash("choice3")
+
+
+function init(self)
+	
+	msg.post("worlds:/musicplayer", "start_level_4_intro")
+	
+	
+	self.kelloKaynnissa = false
+	self.timer = 0
+	self.ajastinSec = 0
+	self.ajastinTenth = 0
+	self.stage = 0
+	self.you = false
+	self.question = 1
+	self.questionAsked = false
+	self.introDone = false
+	
+	
+	self.velocity = 0
+	self.acceleration = 0
+	
+	msg.post("@render:", "clear_color", { color = vmath.vector4(0, 0, 0, 1) })
+	
+	
+	-- Ladataan tekstitiedostoista tarvittavat tekstit.
+	-- HUOM! Muista lisätä game.project:iin custom_resourcet!
+	self.TEXTS_COUNT = 10
+	local texts_path = "/main/text_files/level_4_intro/"
+	self.all_texts = {}
+	for i = 0, self.TEXTS_COUNT - 1 do self.all_texts[i] = read_text_files(self, i, texts_path) end
+	
+	self.gui_texts = {}
+	--self.guis_written = {}
+	
+	self.questions = {}
+	self.answers = {}
+		
+	self.startTintRise = true
+	self.startTint = 0
+	
+	
+	msg.post("worlds:/musicplayer#sfx_grasshopper","play_sound")
+	
+	
+	local pos = vmath.vector3(512, 384, 0)	
+	local size = vmath.vector3(1024, 768, 0)
+	self.intro_bg = gui.new_box_node(pos, size)
+	gui.set_texture(self.intro_bg, "intro_bg")
+	
+	
+	pos = vmath.vector3(500, 500, 0)	
+	size = vmath.vector3(780, 500, 0)
+	self.intro_textbox = gui.new_box_node(pos, size)
+	gui.set_texture(self.intro_textbox, "intro_textbox")
+	
+	pos = vmath.vector3(500, 200, 0)	
+	size = vmath.vector3(780, 65, 0)
+	self.answer_1_box = gui.new_box_node(pos, size)
+	gui.set_texture(self.answer_1_box, "answer_1")
+	
+	pos = vmath.vector3(500, 130, 0)	
+	size = vmath.vector3(780, 65, 0)
+	self.answer_2_box = gui.new_box_node(pos, size)
+	gui.set_texture(self.answer_2_box, "answer_2")
+	
+	pos = vmath.vector3(500, 60, 0)	
+	size = vmath.vector3(780, 65, 0)
+	self.answer_3_box = gui.new_box_node(pos, size)
+	gui.set_texture(self.answer_3_box, "answer_3")
+	
+	hide_answers(self)
+	
+	local pos = vmath.vector3(0, 0, 0)	
+	local size = vmath.vector3(0, 0, 0)
+	self.box_text_area = gui.new_box_node(pos, size)
+	pos = vmath.vector3(500, 500, 0)	
+	size = vmath.vector3(780, 500, 0)
+	col = vmath.vector4(255, 255, 255, 0)
+	
+	self.box_text_area_clipper = gui.new_box_node(pos, size)
+
+	gui.set_parent(self.box_text_area, self.box_text_area_clipper)
+	gui.set_clipping_mode(self.box_text_area_clipper, gui.CLIPPING_MODE_STENCIL)
+	gui.set_color(self.box_text_area_clipper, col)
+
+	self.isQuestion = false
+	self.stage_written = {}
+	self.letters_written = 0
+	self.level_done = false
+	self.answer = 0
+	self.question = 1
+
+	local pos = vmath.vector3(-350, 125, 0)
+	self.complete_text = ""
+	self.complete_text_node = gui.new_text_node(pos, self.complete_text)
+	gui.set_parent(self.complete_text_node, self.box_text_area)
+	gui.set_pivot(self.complete_text_node, gui.PIVOT_NW)
+	gui.set_font(self.complete_text_node, "textfield")
+	col = vmath.vector4(255, 255, 255, 1)
+	gui.set_color(self.complete_text_node, col)
+	--gui.set_parent(self.complete_text_node, self.box_text_area)
+	gui.set_line_break(self.complete_text_node, true)
+	local siz = vmath.vector3(700, 0, 0)
+	gui.set_size(self.complete_text_node, siz)
+
+
+	local pos = vmath.vector3(-310, 20, 0)
+	self.question_text = ""
+	self.question_text_node = gui.new_text_node(pos, self.question_text)
+	gui.set_pivot(self.question_text_node, gui.PIVOT_NW)
+	gui.set_font(self.question_text_node, "answer")
+	col = vmath.vector4(255, 255, 255, 1)
+	gui.set_color(self.question_text_node, col)
+	gui.set_parent(self.question_text_node, self.answer_1_box)
+	gui.set_line_break(self.question_text_node, true)
+	local siz = vmath.vector3(685, 0, 0)
+	gui.set_size(self.question_text_node, siz)
+
+	local pos = vmath.vector3(-310, 20, 0)
+	self.question_text_2 = ""
+	self.question_text_node_2 = gui.new_text_node(pos, self.question_text_2)
+	gui.set_pivot(self.question_text_node_2, gui.PIVOT_NW)
+	gui.set_font(self.question_text_node_2, "answer")
+	gui.set_color(self.question_text_node_2, col)
+	gui.set_parent(self.question_text_node_2, self.answer_2_box)
+	gui.set_line_break(self.question_text_node_2, true)
+	local siz = vmath.vector3(685, 0, 0)
+	gui.set_size(self.question_text_node_2, siz)
+	
+	local pos = vmath.vector3(-310, 20, 0)
+	self.question_text_3 = ""
+	self.question_text_node_3 = gui.new_text_node(pos, self.question_text_3)
+	gui.set_pivot(self.question_text_node_3, gui.PIVOT_NW)
+	gui.set_font(self.question_text_node_3, "answer")
+	gui.set_color(self.question_text_node_3, col)
+	gui.set_parent(self.question_text_node_3, self.answer_3_box)
+	gui.set_line_break(self.question_text_node_3, true)
+	local siz = vmath.vector3(685, 0, 0)
+	gui.set_size(self.question_text_node_3, siz)
+
+
+
+	local pos = vmath.vector3(500, 500, 0)	
+	local size = vmath.vector3(780, 500, 0)
+	self.text_fade = gui.new_box_node(pos, size)
+	gui.set_texture(self.text_fade, "fade")
+
+
+	
+	local pos = vmath.vector3(512, -100, 0)
+	self.proceed = gui.new_text_node(pos, "Press 'Enter' To Proceed")
+	gui.set_pivot(self.proceed, gui.PIVOT_CENTER)
+	gui.set_font(self.proceed, "title")
+
+	msg.post(".", "acquire_input_focus")
+	
+end
+
+
+function on_input(self, action_id, action)	
+	if (action_id == input_jump or action_id == input_jump2) then
+		self.accelerating = true
+		self.acceleration = self.acceleration + 0.5
+		move_text_up(self)
+	elseif (action_id == input_down or action_id == input_down2) then
+		self.accelerating = true
+	
+		self.acceleration = self.acceleration + 0.5
+		move_text_down(self)
+	elseif action_id == input_enter and action.pressed and self.questionAsked == false then
+		pprint(self.stage)
+		pprint(self.introDone)
+		if self.stage == 7 and self.introDone == true then
+			--msg.post("worlds:/musicplayer", "start_level_1")
+			msg.post("worlds:/level_loader", "next_level")	
+		elseif self.stage == 7 and self.introDone == false then			
+			self.ajastinTenth = 99999
+			self.introDone = true
+			msg.post("worlds:/musicplayer#sfx_humina","play_sound")
+		
+		else
+			add_stage(self)
+			clock_reset(self)
+		end
+	elseif action_id == input_enter and action.pressed and self.level_done == true then
+		--msg.post("worlds:/level_loader", "start_ending")	
+	elseif action_id == input_choice1 and action.pressed and self.questionAsked == true then
+		self.answer = 1
+	elseif action_id == input_choice2 and action.pressed and self.questionAsked == true then
+		self.answer = 2
+	elseif action_id == input_choice3 and action.pressed and self.questionAsked == true and self.question < 15 then
+		self.answer = 3
+	end
+end
+
+
+function update(self, dt)
+	if self.accelerating == false then
+		self.acceleration = self.acceleration - 0.05
+	end
+	if self.acceleration > 5 then
+		self.acceleration = 5
+	elseif self.acceleration < 0 then 
+		self.acceleration = 0
+	end
+	
+	self.velocity = 2 * self.acceleration	
+	
+	
+	clock(self)
+	
+	if self.stage == self.question and self.questionAsked == false then
+		self.questionAsked = true
+		if self.question == 1 then
+			self.question_text = self.all_texts[1]
+			self.question_text = string.sub(self.question_text, 4, -1)
+			gui.set_text(self.question_text_node, self.question_text)
+			
+			self.question_text = self.all_texts[2]
+			self.question_text = string.sub(self.question_text, 4, -1)
+			gui.set_text(self.question_text_node_2, self.question_text)
+			
+			self.question_text = self.all_texts[3]
+			self.question_text = string.sub(self.question_text, 4, -1)
+			gui.set_text(self.question_text_node_3, self.question_text)
+			
+			show_3_answers(self)
+			--[[
+			
+		elseif self.question == 9 then			
+			self.question_text = self.all_texts[10]
+			self.question_text = string.sub(self.question_text, 4, -1)
+			gui.set_text(self.question_text_node, self.question_text)
+			
+			self.question_text = self.all_texts[11]
+			self.question_text = string.sub(self.question_text, 4, -1)
+			gui.set_text(self.question_text_node_2, self.question_text)
+			
+			self.question_text = self.all_texts[12]
+			self.question_text = string.sub(self.question_text, 4, -1)
+			gui.set_text(self.question_text_node_3, self.question_text)
+			
+			show_3_answers(self)
+			
+		elseif self.question == 17 then			
+			self.question_text = self.all_texts[18]
+			self.question_text = string.sub(self.question_text, 4, -1)
+			gui.set_text(self.question_text_node, self.question_text)
+			
+			self.question_text = self.all_texts[19]
+			self.question_text = string.sub(self.question_text, 4, -1)
+			gui.set_text(self.question_text_node_2, self.question_text)
+			
+			show_2_answers(self)
+			
+		elseif self.question == 22 then
+			self.question_text = self.all_texts[23]
+			self.question_text = string.sub(self.question_text, 4, -1)
+			gui.set_text(self.question_text_node, self.question_text)
+			
+			self.question_text = self.all_texts[24]
+			self.question_text = string.sub(self.question_text, 4, -1)
+			gui.set_text(self.question_text_node_2, self.question_text)
+			
+			show_2_answers(self)--]]
+		end
+	else
+		control_textflow(self)
+	end
+	
+	if self.answer > 0 then
+		if self.question == 1 then
+			msg.post("worlds:/musicplayer#sfx_grasshopper","stop_sound")
+			msg.post("worlds:/musicplayer#sfx_humina","stop_sound")
+		
+			if self.answer == 1 then
+				self.complete_text = self.complete_text .. "\n\n\n\n" .. self.all_texts[1]
+				self.letters_written = string.len(self.complete_text) - 20
+				self.complete_text = self.complete_text .. "\n\n" .. self.all_texts[4]
+			elseif self.answer == 2 then
+				self.complete_text = self.complete_text .. "\n\n\n\n" .. self.all_texts[2]
+				self.letters_written = string.len(self.complete_text) - 20
+				self.complete_text = self.complete_text .. "\n\n" .. self.all_texts[5]
+			else
+				self.complete_text = self.complete_text .. "\n\n\n\n" .. self.all_texts[3]
+				self.letters_written = string.len(self.complete_text) - 20
+				self.complete_text = self.complete_text .. "\n\n" .. self.all_texts[6]
+			end
+			self.stage = 7
+			self.question = 399
+			local pos = gui.get_position(self.box_text_area)
+			pos.y = pos.y + 240
+			gui.set_position(self.box_text_area, pos)
+			--[[
+		elseif self.question == 9 then
+			if self.answer == 1 then
+				self.complete_text = self.complete_text .. "\n\n\n\n" .. self.all_texts[10]
+				self.letters_written = string.len(self.complete_text) - 20
+				self.complete_text = self.complete_text .. "\n\n" .. self.all_texts[13]
+			elseif self.answer == 2 then
+				self.complete_text = self.complete_text .. "\n\n\n\n" .. self.all_texts[11]
+				self.letters_written = string.len(self.complete_text) - 20
+				self.complete_text = self.complete_text .. "\n\n" .. self.all_texts[14]
+			else
+				self.complete_text = self.complete_text .. "\n\n\n\n" .. self.all_texts[12]
+				self.letters_written = string.len(self.complete_text) - 20
+				self.complete_text = self.complete_text .. "\n\n" .. self.all_texts[15]
+			end
+			self.stage = 16
+			self.question = 17
+			local pos = gui.get_position(self.box_text_area)
+			pos.y = pos.y + 230
+			gui.set_position(self.box_text_area, pos)
+			
+   			
+		elseif self.question == 17 then
+			if self.answer == 1 then
+				self.complete_text = self.complete_text .. "\n\n\n\n" .. self.all_texts[18]
+				self.letters_written = string.len(self.complete_text) - 20
+				self.complete_text = self.complete_text .. "\n\n" .. self.all_texts[20]
+			elseif self.answer == 2 then
+				self.complete_text = self.complete_text .. "\n\n\n\n" .. self.all_texts[19]
+				self.letters_written = string.len(self.complete_text) - 20
+				self.complete_text = self.complete_text .. "\n\n" .. self.all_texts[21]
+			end
+			
+			sound.set_group_gain(hash("sfx"), 0.1)
+			msg.post("worlds:/musicplayer#sfx_carcrash", "play_sound")
+			
+			self.stage = 22
+			self.question = 22
+			local pos = gui.get_position(self.box_text_area)
+			pos.y = pos.y + 230
+			gui.set_position(self.box_text_area, pos)
+			
+		elseif self.question == 22 then		
+			if self.answer == 1 then
+				
+				self.complete_text = self.complete_text .. "\n\n\n\n" .. self.all_texts[23]
+				self.letters_written = string.len(self.complete_text) - 20
+				self.complete_text = self.complete_text .. "\n\n" .. self.all_texts[25]
+			elseif self.answer == 2 then
+				self.complete_text = self.complete_text .. "\n\n\n\n" .. self.all_texts[24]
+				self.letters_written = string.len(self.complete_text) - 20
+				self.complete_text = self.complete_text .. "\n\n" .. self.all_texts[26]
+			end
+			self.stage = 27
+			self.question = 399
+			local pos = gui.get_position(self.box_text_area)
+			pos.y = pos.y + 200
+			gui.set_position(self.box_text_area, pos)--]]
+		end
+		
+		
+		local pos = gui.get_position(self.box_text_area)
+		pos.y = pos.y + 50
+		gui.set_position(self.box_text_area, pos)
+		
+		gui.set_text(self.question_text_node, "")
+		gui.set_text(self.question_text_node_2, "")
+		gui.set_text(self.question_text_node_3, "")
+		
+		hide_answers(self)
+		self.questionAsked = false
+		self.answer = 0
+	end
+	
+	
+	if self.introDone == true then
+	
+		if self.startTintRise == true then
+			self.startTint = self.startTint + 0.01
+		else 
+			self.startTint = self.startTint - 0.01
+		end
+		if self.startTint > 1 then
+			self.startTintRise = false
+		elseif self.startTint < 0.25 then
+			self.startTintRise = true
+		end
+		local col = gui.get_color(self.proceed)
+		col.w = self.startTint
+		gui.set_color(self.proceed, col)
+		local pos = vmath.vector3(512, 175, 0)
+		gui.set_position(self.proceed, pos)
+	
+	end
+	self.accelerating = false
+end
+
+
+function read_text_files(self, name_of_file, path_to_file)
+	name_of_file = name_of_file .. ".txt"
+	local file = path_to_file .. name_of_file
+	return sys.load_resource(file)
+end
+
+function clock(self)
+	-- Kello:
+	-- timer nousee 60x sekunnissa
+	-- ajastinTenth 6x sekunnissa
+	-- ajastinSex 1x sekunnissa
+	if not self.kelloKaynnissa then
+		self.timer = self.timer + 1
+	end
+	if self.timer > 2 then
+		self.ajastinTenth = self.ajastinTenth + 1
+		self.timer = 0
+	end
+	if self.ajastinTenth > 10 then
+		self.ajastinSec = self.ajastinSec + 1
+		--self.ajastinTenth = 0
+	end
+end
+
+function clock_reset(self)
+	self.timer = 0
+	self.ajastinTenth = 0
+	self.ajastinSec = 0
+end
+
+function control_textflow(self)
+	for i = 0, self.TEXTS_COUNT - 1 do
+		if self.stage >= i then
+			local pos = vmath.vector3(-300, 225 - i * 45, 0)
+			
+			if self.gui_texts[i] == nil then
+			--[[
+				self.gui_texts[i] = gui.new_text_node(pos, "")
+				--gui.set_pivot(self.gui_texts[i], gui.PIVOT_W)
+				gui.set_pivot(self.gui_texts[i], gui.PIVOT_NW)
+				gui.set_font(self.gui_texts[i], "textfield")
+				gui.set_parent(self.gui_texts[i], self.box_text_area)
+				gui.set_line_break(self.gui_texts[i], true)
+				local siz = vmath.vector3(600, 0, 0)
+				gui.set_size(self.gui_texts[i], siz)--]]
+				--[[
+				if self.you == true then
+					--gui.set_font(self.gui_texts[i], "your_text")
+					local col = vmath.vector4(0, 153, 153, 1)
+					gui.set_color(self.gui_texts[i], col)
+					self.you = false
+				else
+					--gui.set_font(self.gui_texts[i], "girls_text")
+					local col = vmath.vector4(100, 220, 0, 1)
+					gui.set_color(self.gui_texts[i], col)
+					self.you = true
+				end--]]
+			end			
+			
+			--[[
+			if self.guis_written[i] == nil then
+				self.guis_written[i] = false
+			elseif self.guis_written[i] == false then
+				local textString = string.sub(self.all_texts[i], 0, self.ajastinTenth)
+				gui.set_text(self.gui_texts[i], self.complete_text)	
+				
+				if(self.ajastinTenth > string.len(self.all_texts[i])) then
+					self.guis_written[i] = true
+					self.ajastinTenth = 0
+				end
+			end--]]
+			
+			if self.stage_written[self.stage] == nil then
+				add_text(self)
+				self.stage_written[self.stage] = false
+			elseif self.stage_written[self.stage] == false then
+				local textString = string.sub(self.complete_text, 0, self.ajastinTenth + self.letters_written)
+				gui.set_text(self.complete_text_node, textString)	
+				
+				if(self.ajastinTenth > string.len(self.complete_text)) then
+					--self.guis_written[i] = true
+					self.letters_written = self.letters_written + self.ajastinTenth
+					self.ajastinTenth = 0
+				end
+			end
+		end
+	end
+end
+
+function add_stage(self)
+	--self.guis_written[self.stage] = true
+	local textString = string.sub(self.complete_text, 0, 999)
+	gui.set_text(self.complete_text_node, textString)
+		
+	self.stage = self.stage + 1
+	self.letters_written = self.letters_written + string.len(textString)
+
+
+	local pos = gui.get_position(self.box_text_area)
+	--pos.y = pos.y + 10
+	gui.set_position(self.box_text_area, pos)
+
+end
+
+
+function move_text_up(self)
+	local pos = gui.get_position(self.box_text_area)
+	pos.y = pos.y + self.velocity
+	
+	if pos.y > 1500 then
+		pos.y = 1500
+	end
+	
+	gui.set_position(self.box_text_area, pos)
+end
+
+function move_text_down(self)
+	
+	local pos = gui.get_position(self.box_text_area)
+	pos.y = pos.y - self.velocity
+	
+	if pos.y < -1000 then
+		pos.y = -1000
+	end
+	
+	gui.set_position(self.box_text_area, pos)
+end
+
+function add_text(self)
+	if self.questionAsked == false then
+		if self.stage == 0 then
+			local pos = gui.get_position(self.box_text_area)
+			pos.y = pos.y + 70
+			gui.set_position(self.box_text_area, pos)
+			
+			self.complete_text = self.complete_text .. "\n\n" .. self.all_texts[self.stage]
+			self.complete_text = self.complete_text .. "\n\n\n" .. self.all_texts[8]
+			self.complete_text = self.complete_text .. "\n\n" .. self.all_texts[9]	
+		else
+			self.complete_text = self.complete_text .. "\n\n" .. self.all_texts[self.stage]
+		end
+	end
+end
+
+function show_2_answers(self)
+	local pos = vmath.vector3(500, 200, 0)	
+	gui.set_position(self.answer_1_box, pos)
+	
+	pos = vmath.vector3(500, 130, 0)	
+	gui.set_position(self.answer_2_box, pos)
+	
+	--pos = vmath.vector3(500, 60, 0)	
+	--gui.set_position(self.answer_2_box, pos)
+end
+
+function show_3_answers(self)
+	local pos = vmath.vector3(500, 200, 0)	
+	gui.set_position(self.answer_1_box, pos)
+	
+	pos = vmath.vector3(500, 130, 0)	
+	gui.set_position(self.answer_2_box, pos)
+	
+	pos = vmath.vector3(500, 60, 0)	
+	gui.set_position(self.answer_3_box, pos)
+end
+
+function hide_answers(self)
+	local pos = vmath.vector3(500, -200, 0)	
+	gui.set_position(self.answer_1_box, pos)
+	
+	pos = vmath.vector3(500, -200, 0)	
+	gui.set_position(self.answer_2_box, pos)
+	
+	pos = vmath.vector3(500, -200, 0)	
+	gui.set_position(self.answer_3_box, pos)
+end
+

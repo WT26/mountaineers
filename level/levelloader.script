@@ -1,0 +1,87 @@
+	--Levelloader lataa maailmat ja käynnistää ne.
+
+function init(self)
+
+	-- Tell the proxy "level0" to start loading.	
+	msg.post("level_loader#opening_credits", "load")
+
+	-- DEBUG
+	--msg.post("level_loader#level_2_intro", "load")
+	self.current_level = 1
+	self.levels = {"opening_credits", "start_menu", "intro", "level_1", "level_2_intro", "level_2", "level_3_intro", "level_3", "level_4_intro", "level_4", "ending", "end_credits"}
+
+ 	msg.post(".", "acquire_input_focus")
+end
+
+function on_message(self, message_id, message, sender)
+
+	-- Vaihtoehtoinen tapa ladata maailma. 
+    --if message_id == hash("proxy_loaded") and sender.fragment == hash("myproxy1") then
+	
+	
+    if message_id == hash("proxy_loaded") then
+        -- New world is loaded. Init and enable it.
+        msg.post(sender, "init")
+        msg.post(sender, "enable")
+        
+    elseif message_id == hash("next_level") then
+    	if self.current_level < 12 then
+    	
+    		--local music_path = "stop__" .. self.levels[self.current_level]
+    	   	--msg.post("/musicplayer#script", music_path)
+    	   	
+   		   	--msg.post("/musicplayer#script", "stop_music")
+
+	    	local load_path = "level_loader#" .. self.levels[self.current_level + 1]
+	    	local unload_path = "level_loader#" .. self.levels[self.current_level]
+	    		    	
+	 		msg.post(load_path, "load")
+	 		msg.post(unload_path, "unload")
+	 		
+	 		self.current_level = self.current_level + 1
+ 		end
+ 	elseif message_id == hash("last_level") then
+ 	
+ 		if self.current_level > 2 then
+ 		
+ 		   	msg.post("/musicplayer#script", "stop_music")
+	    	local load_path = "level_loader#" .. self.levels[self.current_level - 1]
+	    	local unload_path = "level_loader#" .. self.levels[self.current_level]
+	    	
+	 		msg.post(load_path, "load")
+	 		msg.post(unload_path, "unload")
+	 		self.current_level = self.current_level - 1
+	 	end
+       	--[[
+   	elseif message_id == hash("start_start_menu") then
+ 		msg.post("level_loader#start_menu", "load")
+ 		msg.post("level_loader#opening_credits", "unload")
+ 		 		
+   	elseif message_id == hash("start_intro") then
+ 		msg.post("level_loader#level_2", "load")
+ 		
+ 		--msg.post("level_loader#intro", "load")
+ 		msg.post("level_loader#start_menu", "unload")
+ 		
+ 	elseif message_id == hash("start_level_1") then
+ 		msg.post("level_loader#level_1", "load")
+ 		msg.post("level_loader#intro", "unload")
+ 		
+ 	 elseif message_id == hash("start_level_2_intro") then
+ 		msg.post("level_loader#level_2_intro", "load")
+ 		msg.post(sender, "disable")
+ 		msg.post("level_loader#level_1", "unload")
+ 	
+  	 elseif message_id == hash("start_level_2") then
+ 		msg.post("level_loader#level_2", "load")
+ 		msg.post("level_loader#level_2_intro", "unload")
+ 
+ 	elseif message_id == hash("start_ending") then
+ 		msg.post("level_loader#ending", "load")
+ 		msg.post(sender, "disable")--]]
+ 		
+ 	elseif message_id == hash("which_level") then
+ 	  	msg.post(sender, "cur_level", {current = self.current_level})
+ 	end
+end
+

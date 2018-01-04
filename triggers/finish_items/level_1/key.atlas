@@ -1,0 +1,9 @@
+images {
+  image: "/triggers/finish_items/level_1/images/key_00.png"
+}
+images {
+  image: "/triggers/finish_items/level_1/images/level_1_bag.png"
+}
+margin: 0
+extrude_borders: 0
+inner_padding: 0

@@ -1,0 +1,141 @@
+images {
+  image: "/level/level_3/images/ground2.png"
+}
+images {
+  image: "/level/level_3/images/lava_background.png"
+}
+images {
+  image: "/level/level_3/images/lava_foreground1.png"
+}
+images {
+  image: "/level/level_3/images/lava_foreground2.png"
+}
+images {
+  image: "/level/level_3/images/lava_platform.png"
+}
+images {
+  image: "/level/level_3/images/lava_platform_large.png"
+}
+images {
+  image: "/level/level_3/images/lava_spike1.png"
+}
+images {
+  image: "/level/level_3/images/lava_spike2.png"
+}
+images {
+  image: "/level/level_3/images/lava_spike3.png"
+}
+images {
+  image: "/triggers/traps/images/lava_spikeball.png"
+}
+images {
+  image: "/level/level_3/images/lava_volcano.png"
+}
+images {
+  image: "/level/level_3/images/lava_ground1.png"
+}
+images {
+  image: "/level/level_3/images/lava_ground10.png"
+}
+images {
+  image: "/level/level_3/images/lava_ground11.png"
+}
+images {
+  image: "/level/level_3/images/lava_ground12.png"
+}
+images {
+  image: "/level/level_3/images/lava_ground13.png"
+}
+images {
+  image: "/level/level_3/images/lava_ground14.png"
+}
+images {
+  image: "/level/level_3/images/lava_ground15.png"
+}
+images {
+  image: "/level/level_3/images/lava_ground2.png"
+}
+images {
+  image: "/level/level_3/images/lava_ground3.png"
+}
+images {
+  image: "/level/level_3/images/lava_ground4.png"
+}
+images {
+  image: "/level/level_3/images/lava_ground5.png"
+}
+images {
+  image: "/level/level_3/images/lava_ground6.png"
+}
+images {
+  image: "/level/level_3/images/lava_ground7.png"
+}
+images {
+  image: "/level/level_3/images/lava_ground8.png"
+}
+images {
+  image: "/level/level_3/images/lava_ground9.png"
+}
+images {
+  image: "/level/level_3/images/lavaflame1.png"
+}
+images {
+  image: "/level/level_3/images/lavaflame2.png"
+}
+images {
+  image: "/level/level_3/images/lavaflame3.png"
+}
+images {
+  image: "/level/level_3/images/lavaflame4.png"
+}
+animations {
+  id: "lavaflame"
+  images {
+    image: "/level/level_3/images/lavaflame1.png"
+  }
+  images {
+    image: "/level/level_3/images/lavaflame2.png"
+  }
+  images {
+    image: "/level/level_3/images/lavaflame3.png"
+  }
+  images {
+    image: "/level/level_3/images/lavaflame4.png"
+  }
+  playback: PLAYBACK_LOOP_FORWARD
+  fps: 4
+}
+animations {
+  id: "lavaspike1"
+  images {
+    image: "/level/level_3/images/lavaspike1.png"
+  }
+  images {
+    image: "/level/level_3/images/lavaspike2.png"
+  }
+  images {
+    image: "/level/level_3/images/lavaspike3.png"
+  }
+  images {
+    image: "/level/level_3/images/lavaspike4.png"
+  }
+  playback: PLAYBACK_LOOP_FORWARD
+  fps: 4
+}
+animations {
+  id: "lavaspike2"
+  images {
+    image: "/level/level_3/images/lavaspike5.png"
+  }
+  images {
+    image: "/level/level_3/images/lavaspike6.png"
+  }
+  images {
+    image: "/level/level_3/images/lavaspike7.png"
+  }
+  images {
+    image: "/level/level_3/images/lavaspike8.png"
+  }
+  playback: PLAYBACK_LOOP_FORWARD
+  fps: 4
+}

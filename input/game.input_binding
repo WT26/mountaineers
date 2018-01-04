@@ -1,0 +1,84 @@
+key_trigger {
+  input: KEY_LEFT
+  action: "left"
+}
+key_trigger {
+  input: KEY_RIGHT
+  action: "right"
+}
+key_trigger {
+  input: KEY_SPACE
+  action: "jump"
+}
+key_trigger {
+  input: KEY_I
+  action: "debug"
+}
+key_trigger {
+  input: KEY_ESC
+  action: "quit"
+}
+key_trigger {
+  input: KEY_M
+  action: "mute"
+}
+key_trigger {
+  input: KEY_UP
+  action: "jump2"
+}
+key_trigger {
+  input: KEY_W
+  action: "jump3"
+}
+key_trigger {
+  input: KEY_A
+  action: "left2"
+}
+key_trigger {
+  input: KEY_D
+  action: "right2"
+}
+key_trigger {
+  input: KEY_O
+  action: "debugp"
+}
+key_trigger {
+  input: KEY_ENTER
+  action: "proceed"
+}
+key_trigger {
+  input: KEY_Y
+  action: "left_action"
+}
+key_trigger {
+  input: KEY_N
+  action: "right_action"
+}
+key_trigger {
+  input: KEY_DOWN
+  action: "down"
+}
+key_trigger {
+  input: KEY_S
+  action: "down2"
+}
+key_trigger {
+  input: KEY_1
+  action: "choice1"
+}
+key_trigger {
+  input: KEY_2
+  action: "choice2"
+}
+key_trigger {
+  input: KEY_3
+  action: "choice3"
+}
+key_trigger {
+  input: KEY_L
+  action: "next_level"
+}
+key_trigger {
+  input: KEY_K
+  action: "last_level"
+}

@@ -1,0 +1,58 @@
+script: "/level/ending/ending.gui_script"
+fonts {
+  name: "system_font"
+  font: "/builtins/fonts/system_font.font"
+}
+fonts {
+  name: "textfield"
+  font: "/fonts/textfield.font"
+}
+fonts {
+  name: "title"
+  font: "/fonts/title.font"
+}
+fonts {
+  name: "answer"
+  font: "/fonts/answer.font"
+}
+fonts {
+  name: "fragments"
+  font: "/fonts/Menu_title1.font"
+}
+textures {
+  name: "fade"
+  texture: "/level/ending/images/level_end_textfade.png"
+}
+textures {
+  name: "intro_textbox"
+  texture: "/level/ending/images/intro_textbox.png"
+}
+textures {
+  name: "intro_bg"
+  texture: "/level/ending/images/end_intro_bg.png"
+}
+textures {
+  name: "answer_1"
+  texture: "/level/ending/images/answer_1.png"
+}
+textures {
+  name: "answer_2"
+  texture: "/level/ending/images/answer_2.png"
+}
+textures {
+  name: "answer_3"
+  texture: "/level/ending/images/answer_3.png"
+}
+textures {
+  name: "fade_white"
+  texture: "/level/ending/images/fade_white.png"
+}
+background_color {
+  x: 0.0
+  y: 0.0
+  z: 0.0
+  w: 1.0
+}
+material: "/builtins/materials/gui.material"
+adjust_reference: ADJUST_REFERENCE_PARENT
+max_nodes: 512

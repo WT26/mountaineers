@@ -1,0 +1,9 @@
+images {
+  image: "/level/images/fade_black.png"
+}
+images {
+  image: "/level/images/fade_white.png"
+}
+margin: 0
+extrude_borders: 0
+inner_padding: 0

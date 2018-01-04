@@ -1,0 +1,50 @@
+script: "/level/level_3_intro/level_3_intro.gui_script"
+fonts {
+  name: "textfield"
+  font: "/fonts/textfield.font"
+}
+fonts {
+  name: "your_text"
+  font: "/fonts/your_text.font"
+}
+fonts {
+  name: "title"
+  font: "/fonts/title.font"
+}
+fonts {
+  name: "answer"
+  font: "/fonts/answer.font"
+}
+textures {
+  name: "fade"
+  texture: "/level/level_3_intro/images/level_3_textfade.png"
+}
+textures {
+  name: "intro_textbox"
+  texture: "/level/level_3_intro/images/intro_textbox.png"
+}
+textures {
+  name: "intro_bg"
+  texture: "/level/level_3_intro/images/level_3_intro_bg.png"
+}
+textures {
+  name: "answer_1"
+  texture: "/level/level_3_intro/images/answer_1.png"
+}
+textures {
+  name: "answer_3"
+  texture: "/level/level_3_intro/images/answer_3.png"
+}
+textures {
+  name: "answer_2"
+  texture: "/level/level_3_intro/images/answer_2.png"
+}
+background_color {
+  x: 0.0
+  y: 0.0
+  z: 0.0
+  w: 1.0
+}
+material: "/builtins/materials/gui.material"
+adjust_reference: ADJUST_REFERENCE_PARENT
+max_nodes: 512

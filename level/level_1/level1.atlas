@@ -1,0 +1,187 @@
+images {
+  image: "/level/level_1/images/ground1.png"
+}
+images {
+  image: "/level/level_1/images/ground2.png"
+}
+images {
+  image: "/level/level_1/images/ground3.png"
+}
+images {
+  image: "/level/level_1/images/ground4.png"
+}
+images {
+  image: "/level/level_1/images/ground5.png"
+}
+images {
+  image: "/level/level_1/images/ground6.png"
+}
+images {
+  image: "/level/level_1/images/space1.png"
+}
+images {
+  image: "/level/level_1/images/bg_example.png"
+}
+images {
+  image: "/level/level_1/images/fg_example_pillar.png"
+}
+images {
+  image: "/level/level_1/images/mg_example.png"
+}
+images {
+  image: "/level/level_1/images/level_1_bg.png"
+}
+images {
+  image: "/level/level_1/images/level_1_tree_1.png"
+}
+images {
+  image: "/level/level_1/images/level_1_tree_2.png"
+}
+images {
+  image: "/level/level_1/images/level_1_tree_3.png"
+}
+images {
+  image: "/level/level_1/images/level_1_mg.png"
+}
+images {
+  image: "/level/level_1/images/level_1_fg_1.png"
+}
+images {
+  image: "/level/level_1/images/level_1_fg_2.png"
+}
+images {
+  image: "/level/level_1/images/level_1_fg_3.png"
+}
+images {
+  image: "/level/level_1/images/level_1_bag.png"
+}
+images {
+  image: "/level/level_1/images/spikes.png"
+}
+animations {
+  id: "anim_rain"
+  images {
+    image: "/level/level_1/images/rain_1.png"
+  }
+  images {
+    image: "/level/level_1/images/rain_2.png"
+  }
+  images {
+    image: "/level/level_1/images/rain_3.png"
+  }
+  playback: PLAYBACK_LOOP_FORWARD
+  fps: 20
+  flip_horizontal: 0
+  flip_vertical: 0
+}
+animations {
+  id: "anim_critter"
+  images {
+    image: "/level/level_1/images/critter_1.png"
+  }
+  images {
+    image: "/level/level_1/images/critter_2.png"
+  }
+  images {
+    image: "/level/level_1/images/critter_3.png"
+  }
+  images {
+    image: "/level/level_1/images/critter_4.png"
+  }
+  images {
+    image: "/level/level_1/images/critter_5.png"
+  }
+  playback: PLAYBACK_ONCE_FORWARD
+  fps: 30
+  flip_horizontal: 0
+  flip_vertical: 0
+}
+animations {
+  id: "anim_water_1"
+  images {
+    image: "/level/level_1/images/bubble1.png"
+  }
+  images {
+    image: "/level/level_1/images/bubble2.png"
+  }
+  images {
+    image: "/level/level_1/images/bubble3.png"
+  }
+  images {
+    image: "/level/level_1/images/bubble4.png"
+  }
+  images {
+    image: "/level/level_1/images/bubble5.png"
+  }
+  images {
+    image: "/level/level_1/images/bubble6.png"
+  }
+  images {
+    image: "/level/level_1/images/bubble7.png"
+  }
+  images {
+    image: "/level/level_1/images/bubble8.png"
+  }
+  images {
+    image: "/level/level_1/images/bubble9.png"
+  }
+  images {
+    image: "/level/level_1/images/bubble91.png"
+  }
+  images {
+    image: "/level/level_1/images/bubble92.png"
+  }
+  images {
+    image: "/level/level_1/images/bubble93.png"
+  }
+  playback: PLAYBACK_LOOP_FORWARD
+  fps: 30
+  flip_horizontal: 0
+  flip_vertical: 0
+}
+animations {
+  id: "anim_water_2"
+  images {
+    image: "/level/level_1/images/bubble91.png"
+  }
+  images {
+    image: "/level/level_1/images/bubble92.png"
+  }
+  images {
+    image: "/level/level_1/images/bubble93.png"
+  }
+  images {
+    image: "/level/level_1/images/bubble1.png"
+  }
+  images {
+    image: "/level/level_1/images/bubble2.png"
+  }
+  images {
+    image: "/level/level_1/images/bubble3.png"
+  }
+  images {
+    image: "/level/level_1/images/bubble4.png"
+  }
+  images {
+    image: "/level/level_1/images/bubble5.png"
+  }
+  images {
+    image: "/level/level_1/images/bubble6.png"
+  }
+  images {
+    image: "/level/level_1/images/bubble7.png"
+  }
+  images {
+    image: "/level/level_1/images/bubble8.png"
+  }
+  images {
+    image: "/level/level_1/images/bubble9.png"
+  }
+  playback: PLAYBACK_LOOP_FORWARD
+  fps: 30
+  flip_horizontal: 0
+  flip_vertical: 0
+}
+margin: 0
+extrude_borders: 0
+inner_padding: 0

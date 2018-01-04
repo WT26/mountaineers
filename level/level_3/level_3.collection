@@ -1,0 +1,3285 @@
+name: "level_3"
+instances {
+  id: "fall_death"
+  prototype: "/triggers/traps/fall_death.go"
+  position {
+    x: 2710.649
+    y: 10.359052
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "spikeball"
+  prototype: "/triggers/traps/spikeball.go"
+  position {
+    x: 1168.0157
+    y: 482.35867
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "spikeball1"
+  prototype: "/triggers/traps/spikeball.go"
+  position {
+    x: 1731.6033
+    y: 525.6204
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "spikeball2"
+  prototype: "/triggers/traps/spikeball.go"
+  position {
+    x: 3204.3
+    y: 851.3988
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "spikeball3"
+  prototype: "/triggers/traps/spikeball.go"
+  position {
+    x: 3650.5718
+    y: 559.0908
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "spikeball4"
+  prototype: "/triggers/traps/spikeball.go"
+  position {
+    x: 5143.3506
+    y: 920.5709
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "spikeball5"
+  prototype: "/triggers/traps/spikeball.go"
+  position {
+    x: 5437.89
+    y: 590.32983
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "spikeball6"
+  prototype: "/triggers/traps/spikeball.go"
+  position {
+    x: 769.846
+    y: 528.41626
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "item_3"
+  prototype: "/triggers/finish_items/level_3/item_3.go"
+  position {
+    x: 5684.947
+    y: 884.5567
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "key_piece_1"
+  prototype: "/triggers/collectable/key_pieces/key_piece_1.go"
+  position {
+    x: 1951.0946
+    y: 106.70656
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "key_piece_2"
+  prototype: "/triggers/collectable/key_pieces/key_piece_2.go"
+  position {
+    x: 3734.824
+    y: 525.9751
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "key_piece_3"
+  prototype: "/triggers/collectable/key_pieces/key_piece_3.go"
+  position {
+    x: 4546.026
+    y: 470.5162
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "key_piece_4"
+  prototype: "/triggers/collectable/key_pieces/key_piece_4.go"
+  position {
+    x: 5361.901
+    y: 765.2587
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "player"
+  prototype: "/player/player.go"
+  position {
+    x: 150.0
+    y: 150.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "respawn"
+  prototype: "/triggers/respawn.go"
+  position {
+    x: 146.27156
+    y: 150.21902
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "respawn1"
+  prototype: "/triggers/respawn.go"
+  position {
+    x: 1954.0994
+    y: 101.13788
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "respawn2"
+  prototype: "/triggers/respawn.go"
+  position {
+    x: 3733.9192
+    y: 524.9535
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "respawn3"
+  prototype: "/triggers/respawn.go"
+  position {
+    x: 4547.13
+    y: 466.92883
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "respawn4"
+  prototype: "/triggers/respawn.go"
+  position {
+    x: 5359.1763
+    y: 758.70197
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "volcano"
+  prototype: "/triggers/sound_triggers/sound_trigger.go"
+  position {
+    x: 265.8608
+    y: 104.72035
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  component_properties {
+    id: "script"
+    properties {
+      id: "sound_name"
+      value: "sfx_volcano"
+      type: PROPERTY_TYPE_HASH
+    }
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "spike_death"
+  prototype: "/triggers/traps/spike_death.go"
+  position {
+    x: 928.46155
+    y: 56.316406
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: -0.7770718
+    w: 0.629412
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "spike_death1"
+  prototype: "/triggers/traps/spike_death.go"
+  position {
+    x: 986.11005
+    y: 46.887203
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: -0.556361
+    w: 0.83094066
+  }
+  scale3 {
+    x: 1.0
+    y: 0.656425
+    z: 1.0
+  }
+}
+instances {
+  id: "spike_death10"
+  prototype: "/triggers/traps/spike_death.go"
+  position {
+    x: 2970.6433
+    y: 454.3263
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: -0.54802394
+    w: 0.8364627
+  }
+  scale3 {
+    x: 1.0
+    y: 0.656425
+    z: 1.0
+  }
+}
+instances {
+  id: "spike_death11"
+  prototype: "/triggers/traps/spike_death.go"
+  position {
+    x: 3338.5103
+    y: 476.3798
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: -0.57286745
+    w: 0.819648
+  }
+  scale3 {
+    x: 1.0
+    y: 0.656425
+    z: 1.0
+  }
+}
+instances {
+  id: "spike_death12"
+  prototype: "/triggers/traps/spike_death.go"
+  position {
+    x: 3423.44
+    y: 498.0496
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: -1.2756364E-8
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "spike_death13"
+  prototype: "/triggers/traps/spike_death.go"
+  position {
+    x: 3505.2183
+    y: 483.14676
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: -0.16918236
+    w: 0.98558474
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "spike_death14"
+  prototype: "/triggers/traps/spike_death.go"
+  position {
+    x: 4163.0903
+    y: 264.95453
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: -0.29552022
+    w: 0.9553365
+  }
+  scale3 {
+    x: 1.0
+    y: 0.656425
+    z: 1.0
+  }
+}
+instances {
+  id: "spike_death15"
+  prototype: "/triggers/traps/spike_death.go"
+  position {
+    x: 4213.697
+    y: 245.94121
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.19866933
+    w: 0.9800666
+  }
+  scale3 {
+    x: 1.0
+    y: 0.656425
+    z: 1.0
+  }
+}
+instances {
+  id: "spike_death2"
+  prototype: "/triggers/traps/spike_death.go"
+  position {
+    x: 1402.9663
+    y: 46.268562
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.73114586
+    w: 0.68222123
+  }
+  scale3 {
+    x: 1.0
+    y: 0.3132427
+    z: 1.0
+  }
+}
+instances {
+  id: "spike_death3"
+  prototype: "/triggers/traps/spike_death.go"
+  position {
+    x: 1350.4153
+    y: 60.534122
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: -0.109778315
+    w: 0.9939561
+  }
+  scale3 {
+    x: 0.38319892
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "spike_death4"
+  prototype: "/triggers/traps/spike_death.go"
+  position {
+    x: 519.1125
+    y: 159.42863
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: -0.109778315
+    w: 0.9939561
+  }
+  scale3 {
+    x: 0.6236246
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "spike_death5"
+  prototype: "/triggers/traps/spike_death.go"
+  position {
+    x: 639.362
+    y: 228.40633
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.19866933
+    w: 0.9800666
+  }
+  scale3 {
+    x: 0.3084128
+    y: 0.656425
+    z: 1.0
+  }
+}
+instances {
+  id: "spike_death6"
+  prototype: "/triggers/traps/spike_death.go"
+  position {
+    x: 2107.8052
+    y: 174.88145
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.19866933
+    w: 0.9800666
+  }
+  scale3 {
+    x: 0.313895
+    y: 0.656425
+    z: 1.0
+  }
+}
+instances {
+  id: "spike_death7"
+  prototype: "/triggers/traps/spike_death.go"
+  position {
+    x: 2499.264
+    y: 377.4656
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: -0.029995512
+    w: 0.99955004
+  }
+  scale3 {
+    x: 0.45340347
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "spike_death8"
+  prototype: "/triggers/traps/spike_death.go"
+  position {
+    x: 2561.603
+    y: 379.67227
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.19866933
+    w: 0.9800666
+  }
+  scale3 {
+    x: 0.17887601
+    y: 0.656425
+    z: 1.0
+  }
+}
+instances {
+  id: "spike_death9"
+  prototype: "/triggers/traps/spike_death.go"
+  position {
+    x: 2926.3726
+    y: 463.75552
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: -0.109778315
+    w: 0.9939561
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+scale_along_z: 0
+embedded_instances {
+  id: "background"
+  data: "embedded_components {\n"
+  "  id: \"sprite\"\n"
+  "  type: \"sprite\"\n"
+  "  data: \"tile_set: \\\"/level/level_3/level_3.atlas\\\"\\n"
+  "default_animation: \\\"lava_background\\\"\\n"
+  "material: \\\"/builtins/materials/sprite.material\\\"\\n"
+  "blend_mode: BLEND_MODE_ALPHA\\n"
+  "\"\n"
+  "  position {\n"
+  "    x: 1501.098\n"
+  "    y: 437.18176\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "    w: 1.0\n"
+  "  }\n"
+  "}\n"
+  ""
+  position {
+    x: 0.0
+    y: 0.0
+    z: -1.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+embedded_instances {
+  id: "foreground"
+  data: ""
+  position {
+    x: 0.0
+    y: 0.0
+    z: 0.8
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+embedded_instances {
+  id: "spike_ball_fact"
+  children: "spikeball"
+  children: "spikeball1"
+  children: "spikeball2"
+  children: "spikeball3"
+  children: "spikeball4"
+  children: "spikeball5"
+  children: "spikeball6"
+  data: "components {\n"
+  "  id: \"script\"\n"
+  "  component: \"/triggers/traps/spike_ball_fact.script\"\n"
+  "  position {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "    w: 1.0\n"
+  "  }\n"
+  "}\n"
+  ""
+  position {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+embedded_instances {
+  id: "middleground"
+  data: "embedded_components {\n"
+  "  id: \"a\"\n"
+  "  type: \"sprite\"\n"
+  "  data: \"tile_set: \\\"/level/level_3/level_3.atlas\\\"\\n"
+  "default_animation: \\\"lava_foreground2\\\"\\n"
+  "material: \\\"/builtins/materials/sprite.material\\\"\\n"
+  "blend_mode: BLEND_MODE_ALPHA\\n"
+  "\"\n"
+  "  position {\n"
+  "    x: 1775.1709\n"
+  "    y: 182.26263\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "    w: 1.0\n"
+  "  }\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"b\"\n"
+  "  type: \"sprite\"\n"
+  "  data: \"tile_set: \\\"/level/level_3/level_3.atlas\\\"\\n"
+  "default_animation: \\\"lava_foreground1\\\"\\n"
+  "material: \\\"/builtins/materials/sprite.material\\\"\\n"
+  "blend_mode: BLEND_MODE_ALPHA\\n"
+  "\"\n"
+  "  position {\n"
+  "    x: 2562.1602\n"
+  "    y: 182.20682\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "    w: 1.0\n"
+  "  }\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"sprite1\"\n"
+  "  type: \"sprite\"\n"
+  "  data: \"tile_set: \\\"/level/level_3/level_3.atlas\\\"\\n"
+  "default_animation: \\\"lava_foreground2\\\"\\n"
+  "material: \\\"/builtins/materials/sprite.material\\\"\\n"
+  "blend_mode: BLEND_MODE_ALPHA\\n"
+  "\"\n"
+  "  position {\n"
+  "    x: 201.12854\n"
+  "    y: 182.77345\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "    w: 1.0\n"
+  "  }\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"sprite2\"\n"
+  "  type: \"sprite\"\n"
+  "  data: \"tile_set: \\\"/level/level_3/level_3.atlas\\\"\\n"
+  "default_animation: \\\"lava_foreground1\\\"\\n"
+  "material: \\\"/builtins/materials/sprite.material\\\"\\n"
+  "blend_mode: BLEND_MODE_ALPHA\\n"
+  "\"\n"
+  "  position {\n"
+  "    x: 989.89703\n"
+  "    y: 182.75163\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "    w: 1.0\n"
+  "  }\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"sprite3\"\n"
+  "  type: \"sprite\"\n"
+  "  data: \"tile_set: \\\"/level/level_3/level_3.atlas\\\"\\n"
+  "default_animation: \\\"lava_foreground2\\\"\\n"
+  "material: \\\"/builtins/materials/sprite.material\\\"\\n"
+  "blend_mode: BLEND_MODE_ALPHA\\n"
+  "\"\n"
+  "  position {\n"
+  "    x: 3351.1301\n"
+  "    y: 182.8054\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "    w: 1.0\n"
+  "  }\n"
+  "}\n"
+  ""
+  position {
+    x: -0.0
+    y: -0.0
+    z: -0.5
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+embedded_instances {
+  id: "playground"
+  children: "geometry_collision"
+  children: "player"
+  data: "embedded_components {\n"
+  "  id: \"ground0\"\n"
+  "  type: \"sprite\"\n"
+  "  data: \"tile_set: \\\"/level/level_3/level_3.atlas\\\"\\n"
+  "default_animation: \\\"lava_ground10\\\"\\n"
+  "material: \\\"/builtins/materials/sprite.material\\\"\\n"
+  "blend_mode: BLEND_MODE_ALPHA\\n"
+  "\"\n"
+  "  position {\n"
+  "    x: 3828.37\n"
+  "    y: 361.5102\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.27635565\n"
+  "    w: 0.96105546\n"
+  "  }\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"ground01\"\n"
+  "  type: \"sprite\"\n"
+  "  data: \"tile_set: \\\"/level/level_3/level_3.atlas\\\"\\n"
+  "default_animation: \\\"lava_ground4\\\"\\n"
+  "material: \\\"/builtins/materials/sprite.material\\\"\\n"
+  "blend_mode: BLEND_MODE_ALPHA\\n"
+  "\"\n"
+  "  position {\n"
+  "    x: 4983.0776\n"
+  "    y: 542.1588\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: -0.24740396\n"
+  "    w: 0.9689124\n"
+  "  }\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"ground1\"\n"
+  "  type: \"sprite\"\n"
+  "  data: \"tile_set: \\\"/level/level_3/level_3.atlas\\\"\\n"
+  "default_animation: \\\"lava_ground4\\\"\\n"
+  "material: \\\"/builtins/materials/sprite.material\\\"\\n"
+  "blend_mode: BLEND_MODE_ALPHA\\n"
+  "\"\n"
+  "  position {\n"
+  "    x: 4354.927\n"
+  "    y: 165.24352\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 1.5273037E-9\n"
+  "    w: 1.0\n"
+  "  }\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"ground10\"\n"
+  "  type: \"sprite\"\n"
+  "  data: \"tile_set: \\\"/level/level_3/level_3.atlas\\\"\\n"
+  "default_animation: \\\"lava_ground10\\\"\\n"
+  "material: \\\"/builtins/materials/sprite.material\\\"\\n"
+  "blend_mode: BLEND_MODE_ALPHA\\n"
+  "\"\n"
+  "  position {\n"
+  "    x: 1685.7721\n"
+  "    y: -62.92998\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "    w: 1.0\n"
+  "  }\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"ground11\"\n"
+  "  type: \"sprite\"\n"
+  "  data: \"tile_set: \\\"/level/level_3/level_3.atlas\\\"\\n"
+  "default_animation: \\\"lava_ground3\\\"\\n"
+  "material: \\\"/builtins/materials/sprite.material\\\"\\n"
+  "blend_mode: BLEND_MODE_ALPHA\\n"
+  "\"\n"
+  "  position {\n"
+  "    x: 4689.485\n"
+  "    y: 197.31966\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.16918235\n"
+  "    w: 0.9855848\n"
+  "  }\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"ground12\"\n"
+  "  type: \"sprite\"\n"
+  "  data: \"tile_set: \\\"/level/level_3/level_3.atlas\\\"\\n"
+  "default_animation: \\\"lava_platform_large\\\"\\n"
+  "material: \\\"/builtins/materials/sprite.material\\\"\\n"
+  "blend_mode: BLEND_MODE_ALPHA\\n"
+  "\"\n"
+  "  position {\n"
+  "    x: 956.88654\n"
+  "    y: 11.308704\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "    w: 1.0\n"
+  "  }\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"ground13\"\n"
+  "  type: \"sprite\"\n"
+  "  data: \"tile_set: \\\"/level/level_3/level_3.atlas\\\"\\n"
+  "default_animation: \\\"lava_platform_large\\\"\\n"
+  "material: \\\"/builtins/materials/sprite.material\\\"\\n"
+  "blend_mode: BLEND_MODE_ALPHA\\n"
+  "\"\n"
+  "  position {\n"
+  "    x: 1372.2676\n"
+  "    y: 18.519463\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "    w: 1.0\n"
+  "  }\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"ground14\"\n"
+  "  type: \"sprite\"\n"
+  "  data: \"tile_set: \\\"/level/level_3/level_3.atlas\\\"\\n"
+  "default_animation: \\\"lava_ground11\\\"\\n"
+  "material: \\\"/builtins/materials/sprite.material\\\"\\n"
+  "blend_mode: BLEND_MODE_ALPHA\\n"
+  "\"\n"
+  "  position {\n"
+  "    x: 2118.4458\n"
+  "    y: 111.917076\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.08987855\n"
+  "    w: 0.9959527\n"
+  "  }\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"ground15\"\n"
+  "  type: \"sprite\"\n"
+  "  data: \"tile_set: \\\"/level/level_3/level_3.atlas\\\"\\n"
+  "default_animation: \\\"lava_ground3\\\"\\n"
+  "material: \\\"/builtins/materials/sprite.material\\\"\\n"
+  "blend_mode: BLEND_MODE_ALPHA\\n"
+  "\"\n"
+  "  position {\n"
+  "    x: 4831.869\n"
+  "    y: 206.61458\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.099833414\n"
+  "    w: 0.9950042\n"
+  "  }\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"ground16\"\n"
+  "  type: \"sprite\"\n"
+  "  data: \"tile_set: \\\"/level/level_3/level_3.atlas\\\"\\n"
+  "default_animation: \\\"lava_ground13\\\"\\n"
+  "material: \\\"/builtins/materials/sprite.material\\\"\\n"
+  "blend_mode: BLEND_MODE_ALPHA\\n"
+  "\"\n"
+  "  position {\n"
+  "    x: 4835.438\n"
+  "    y: 517.854\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "    w: 1.0\n"
+  "  }\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"ground17\"\n"
+  "  type: \"sprite\"\n"
+  "  data: \"tile_set: \\\"/level/level_3/level_3.atlas\\\"\\n"
+  "default_animation: \\\"lava_ground14\\\"\\n"
+  "material: \\\"/builtins/materials/sprite.material\\\"\\n"
+  "blend_mode: BLEND_MODE_ALPHA\\n"
+  "\"\n"
+  "  position {\n"
+  "    x: 5540.375\n"
+  "    y: 654.2103\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "    w: 1.0\n"
+  "  }\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"ground18\"\n"
+  "  type: \"sprite\"\n"
+  "  data: \"tile_set: \\\"/level/level_3/level_3.atlas\\\"\\n"
+  "default_animation: \\\"lava_ground3\\\"\\n"
+  "material: \\\"/builtins/materials/sprite.material\\\"\\n"
+  "blend_mode: BLEND_MODE_ALPHA\\n"
+  "\"\n"
+  "  position {\n"
+  "    x: 5511.4204\n"
+  "    y: 262.067\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "    w: 1.0\n"
+  "  }\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"ground19\"\n"
+  "  type: \"sprite\"\n"
+  "  data: \"tile_set: \\\"/level/level_3/level_3.atlas\\\"\\n"
+  "default_animation: \\\"lava_platform_large\\\"\\n"
+  "material: \\\"/builtins/materials/sprite.material\\\"\\n"
+  "blend_mode: BLEND_MODE_ALPHA\\n"
+  "\"\n"
+  "  position {\n"
+  "    x: 4167.6396\n"
+  "    y: 238.71921\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: -0.1888589\n"
+  "    w: 0.9820042\n"
+  "  }\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"ground2\"\n"
+  "  type: \"sprite\"\n"
+  "  data: \"tile_set: \\\"/level/level_3/level_3.atlas\\\"\\n"
+  "default_animation: \\\"lava_ground9\\\"\\n"
+  "material: \\\"/builtins/materials/sprite.material\\\"\\n"
+  "blend_mode: BLEND_MODE_ALPHA\\n"
+  "\"\n"
+  "  position {\n"
+  "    x: 2954.5088\n"
+  "    y: 459.00763\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "    w: 1.0\n"
+  "  }\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"ground20\"\n"
+  "  type: \"sprite\"\n"
+  "  data: \"tile_set: \\\"/level/level_3/level_3.atlas\\\"\\n"
+  "default_animation: \\\"lava_platform_large\\\"\\n"
+  "material: \\\"/builtins/materials/sprite.material\\\"\\n"
+  "blend_mode: BLEND_MODE_ALPHA\\n"
+  "\"\n"
+  "  position {\n"
+  "    x: 5142.1714\n"
+  "    y: 627.82825\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.16918235\n"
+  "    w: 0.9855848\n"
+  "  }\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"ground21\"\n"
+  "  type: \"sprite\"\n"
+  "  data: \"tile_set: \\\"/level/level_3/level_3.atlas\\\"\\n"
+  "default_animation: \\\"lava_platform\\\"\\n"
+  "material: \\\"/builtins/materials/sprite.material\\\"\\n"
+  "blend_mode: BLEND_MODE_ALPHA\\n"
+  "\"\n"
+  "  position {\n"
+  "    x: 5297.2007\n"
+  "    y: 697.972\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.15931821\n"
+  "    w: 0.98722726\n"
+  "  }\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"ground3\"\n"
+  "  type: \"sprite\"\n"
+  "  data: \"tile_set: \\\"/level/level_3/level_3.atlas\\\"\\n"
+  "default_animation: \\\"lava_ground3\\\"\\n"
+  "material: \\\"/builtins/materials/sprite.material\\\"\\n"
+  "blend_mode: BLEND_MODE_ALPHA\\n"
+  "\"\n"
+  "  position {\n"
+  "    x: 2594.6777\n"
+  "    y: 115.00846\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.13954312\n"
+  "    w: 0.990216\n"
+  "  }\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"ground4\"\n"
+  "  type: \"sprite\"\n"
+  "  data: \"tile_set: \\\"/level/level_3/level_3.atlas\\\"\\n"
+  "default_animation: \\\"lava_ground3\\\"\\n"
+  "material: \\\"/builtins/materials/sprite.material\\\"\\n"
+  "blend_mode: BLEND_MODE_ALPHA\\n"
+  "\"\n"
+  "  position {\n"
+  "    x: 3964.124\n"
+  "    y: 64.31635\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.10977831\n"
+  "    w: 0.9939561\n"
+  "  }\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"ground5\"\n"
+  "  type: \"sprite\"\n"
+  "  data: \"tile_set: \\\"/level/level_3/level_3.atlas\\\"\\n"
+  "default_animation: \\\"lava_ground3\\\"\\n"
+  "material: \\\"/builtins/materials/sprite.material\\\"\\n"
+  "blend_mode: BLEND_MODE_ALPHA\\n"
+  "\"\n"
+  "  position {\n"
+  "    x: 3433.1475\n"
+  "    y: 248.77048\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: -4.0190584E-9\n"
+  "    w: 1.0\n"
+  "  }\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"ground6\"\n"
+  "  type: \"sprite\"\n"
+  "  data: \"tile_set: \\\"/level/level_3/level_3.atlas\\\"\\n"
+  "default_animation: \\\"lava_ground3\\\"\\n"
+  "material: \\\"/builtins/materials/sprite.material\\\"\\n"
+  "blend_mode: BLEND_MODE_ALPHA\\n"
+  "\"\n"
+  "  position {\n"
+  "    x: 2994.548\n"
+  "    y: 109.67887\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "    w: 1.0\n"
+  "  }\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"ground8\"\n"
+  "  type: \"sprite\"\n"
+  "  data: \"tile_set: \\\"/level/level_3/level_3.atlas\\\"\\n"
+  "default_animation: \\\"lava_ground14\\\"\\n"
+  "material: \\\"/builtins/materials/sprite.material\\\"\\n"
+  "blend_mode: BLEND_MODE_ALPHA\\n"
+  "\"\n"
+  "  position {\n"
+  "    x: 5.5181103\n"
+  "    y: 124.157486\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "    w: 1.0\n"
+  "  }\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"ground9\"\n"
+  "  type: \"sprite\"\n"
+  "  data: \"tile_set: \\\"/level/level_3/level_3.atlas\\\"\\n"
+  "default_animation: \\\"lava_ground11\\\"\\n"
+  "material: \\\"/builtins/materials/sprite.material\\\"\\n"
+  "blend_mode: BLEND_MODE_ALPHA\\n"
+  "\"\n"
+  "  position {\n"
+  "    x: 519.42664\n"
+  "    y: 104.908966\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "    w: 1.0\n"
+  "  }\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"spike1\"\n"
+  "  type: \"sprite\"\n"
+  "  data: \"tile_set: \\\"/level/level_3/level_3.atlas\\\"\\n"
+  "default_animation: \\\"lavaspike1\\\"\\n"
+  "material: \\\"/builtins/materials/sprite.material\\\"\\n"
+  "blend_mode: BLEND_MODE_ALPHA\\n"
+  "\"\n"
+  "  position {\n"
+  "    x: 929.25287\n"
+  "    y: 67.52863\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "    w: 1.0\n"
+  "  }\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"spike10\"\n"
+  "  type: \"sprite\"\n"
+  "  data: \"tile_set: \\\"/level/level_3/level_3.atlas\\\"\\n"
+  "default_animation: \\\"lavaspike1\\\"\\n"
+  "material: \\\"/builtins/materials/sprite.material\\\"\\n"
+  "blend_mode: BLEND_MODE_ALPHA\\n"
+  "\"\n"
+  "  position {\n"
+  "    x: 2919.2444\n"
+  "    y: 475.67288\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "    w: 1.0\n"
+  "  }\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"spike11\"\n"
+  "  type: \"sprite\"\n"
+  "  data: \"tile_set: \\\"/level/level_3/level_3.atlas\\\"\\n"
+  "default_animation: \\\"lavaspike2\\\"\\n"
+  "material: \\\"/builtins/materials/sprite.material\\\"\\n"
+  "blend_mode: BLEND_MODE_ALPHA\\n"
+  "\"\n"
+  "  position {\n"
+  "    x: 2969.865\n"
+  "    y: 461.12274\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "    w: 1.0\n"
+  "  }\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"spike12\"\n"
+  "  type: \"sprite\"\n"
+  "  data: \"tile_set: \\\"/level/level_3/level_3.atlas\\\"\\n"
+  "default_animation: \\\"lavaspike2\\\"\\n"
+  "material: \\\"/builtins/materials/sprite.material\\\"\\n"
+  "blend_mode: BLEND_MODE_ALPHA\\n"
+  "\"\n"
+  "  position {\n"
+  "    x: 3337.9482\n"
+  "    y: 500.18564\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "    w: 1.0\n"
+  "  }\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"spike13\"\n"
+  "  type: \"sprite\"\n"
+  "  data: \"tile_set: \\\"/level/level_3/level_3.atlas\\\"\\n"
+  "default_animation: \\\"lavaspike1\\\"\\n"
+  "material: \\\"/builtins/materials/sprite.material\\\"\\n"
+  "blend_mode: BLEND_MODE_ALPHA\\n"
+  "\"\n"
+  "  position {\n"
+  "    x: 3423.2979\n"
+  "    y: 535.16205\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "    w: 1.0\n"
+  "  }\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"spike14\"\n"
+  "  type: \"sprite\"\n"
+  "  data: \"tile_set: \\\"/level/level_3/level_3.atlas\\\"\\n"
+  "default_animation: \\\"lavaspike1\\\"\\n"
+  "material: \\\"/builtins/materials/sprite.material\\\"\\n"
+  "blend_mode: BLEND_MODE_ALPHA\\n"
+  "\"\n"
+  "  position {\n"
+  "    x: 3510.979\n"
+  "    y: 508.5621\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: -0.059964005\n"
+  "    w: 0.99820054\n"
+  "  }\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"spike15\"\n"
+  "  type: \"sprite\"\n"
+  "  data: \"tile_set: \\\"/level/level_3/level_3.atlas\\\"\\n"
+  "default_animation: \\\"lavaspike1\\\"\\n"
+  "material: \\\"/builtins/materials/sprite.material\\\"\\n"
+  "blend_mode: BLEND_MODE_ALPHA\\n"
+  "\"\n"
+  "  position {\n"
+  "    x: 4166.5767\n"
+  "    y: 283.3502\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: -0.17902957\n"
+  "    w: 0.9838437\n"
+  "  }\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"spike16\"\n"
+  "  type: \"sprite\"\n"
+  "  data: \"tile_set: \\\"/level/level_3/level_3.atlas\\\"\\n"
+  "default_animation: \\\"lavaspike2\\\"\\n"
+  "material: \\\"/builtins/materials/sprite.material\\\"\\n"
+  "blend_mode: BLEND_MODE_ALPHA\\n"
+  "\"\n"
+  "  position {\n"
+  "    x: 4220.5044\n"
+  "    y: 262.57193\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "    w: 1.0\n"
+  "  }\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"spike2\"\n"
+  "  type: \"sprite\"\n"
+  "  data: \"tile_set: \\\"/level/level_3/level_3.atlas\\\"\\n"
+  "default_animation: \\\"lavaspike2\\\"\\n"
+  "material: \\\"/builtins/materials/sprite.material\\\"\\n"
+  "blend_mode: BLEND_MODE_ALPHA\\n"
+  "\"\n"
+  "  position {\n"
+  "    x: 986.7913\n"
+  "    y: 55.284386\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "    w: 1.0\n"
+  "  }\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"spike3\"\n"
+  "  type: \"sprite\"\n"
+  "  data: \"tile_set: \\\"/level/level_3/level_3.atlas\\\"\\n"
+  "default_animation: \\\"lavaspike1\\\"\\n"
+  "material: \\\"/builtins/materials/sprite.material\\\"\\n"
+  "blend_mode: BLEND_MODE_ALPHA\\n"
+  "\"\n"
+  "  position {\n"
+  "    x: 1349.5939\n"
+  "    y: 73.42126\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "    w: 1.0\n"
+  "  }\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"spike4\"\n"
+  "  type: \"sprite\"\n"
+  "  data: \"tile_set: \\\"/level/level_3/level_3.atlas\\\"\\n"
+  "default_animation: \\\"lavaspike2\\\"\\n"
+  "material: \\\"/builtins/materials/sprite.material\\\"\\n"
+  "blend_mode: BLEND_MODE_ALPHA\\n"
+  "\"\n"
+  "  position {\n"
+  "    x: 1405.1681\n"
+  "    y: 65.10544\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "    w: 1.0\n"
+  "  }\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"spike5\"\n"
+  "  type: \"sprite\"\n"
+  "  data: \"tile_set: \\\"/level/level_3/level_3.atlas\\\"\\n"
+  "default_animation: \\\"lavaspike2\\\"\\n"
+  "material: \\\"/builtins/materials/sprite.material\\\"\\n"
+  "blend_mode: BLEND_MODE_ALPHA\\n"
+  "\"\n"
+  "  position {\n"
+  "    x: 2108.3552\n"
+  "    y: 182.95805\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "    w: 1.0\n"
+  "  }\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"spike6\"\n"
+  "  type: \"sprite\"\n"
+  "  data: \"tile_set: \\\"/level/level_3/level_3.atlas\\\"\\n"
+  "default_animation: \\\"lavaspike1\\\"\\n"
+  "material: \\\"/builtins/materials/sprite.material\\\"\\n"
+  "blend_mode: BLEND_MODE_ALPHA\\n"
+  "\"\n"
+  "  position {\n"
+  "    x: 525.05035\n"
+  "    y: 189.03737\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "    w: 1.0\n"
+  "  }\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"spike7\"\n"
+  "  type: \"sprite\"\n"
+  "  data: \"tile_set: \\\"/level/level_3/level_3.atlas\\\"\\n"
+  "default_animation: \\\"lavaspike2\\\"\\n"
+  "material: \\\"/builtins/materials/sprite.material\\\"\\n"
+  "blend_mode: BLEND_MODE_ALPHA\\n"
+  "\"\n"
+  "  position {\n"
+  "    x: 642.1033\n"
+  "    y: 238.78737\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.13954312\n"
+  "    w: 0.990216\n"
+  "  }\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"spike8\"\n"
+  "  type: \"sprite\"\n"
+  "  data: \"tile_set: \\\"/level/level_3/level_3.atlas\\\"\\n"
+  "default_animation: \\\"lavaspike1\\\"\\n"
+  "material: \\\"/builtins/materials/sprite.material\\\"\\n"
+  "blend_mode: BLEND_MODE_ALPHA\\n"
+  "\"\n"
+  "  position {\n"
+  "    x: 2495.626\n"
+  "    y: 384.71774\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.15931821\n"
+  "    w: 0.98722726\n"
+  "  }\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"spike9\"\n"
+  "  type: \"sprite\"\n"
+  "  data: \"tile_set: \\\"/level/level_3/level_3.atlas\\\"\\n"
+  "default_animation: \\\"lavaspike2\\\"\\n"
+  "material: \\\"/builtins/materials/sprite.material\\\"\\n"
+  "blend_mode: BLEND_MODE_ALPHA\\n"
+  "\"\n"
+  "  position {\n"
+  "    x: 2561.721\n"
+  "    y: 387.33395\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "    w: 1.0\n"
+  "  }\n"
+  "}\n"
+  ""
+  position {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+embedded_instances {
+  id: "geometry_collision"
+  data: "embedded_components {\n"
+  "  id: \"bounds\"\n"
+  "  type: \"collisionobject\"\n"
+  "  data: \"collision_shape: \\\"\\\"\\n"
+  "type: COLLISION_OBJECT_TYPE_STATIC\\n"
+  "mass: 0.0\\n"
+  "friction: 0.1\\n"
+  "restitution: 0.5\\n"
+  "group: \\\"geometry\\\"\\n"
+  "mask: \\\"player\\\"\\n"
+  "embedded_collision_shape {\\n"
+  "  shapes {\\n"
+  "    shape_type: TYPE_BOX\\n"
+  "    position {\\n"
+  "      x: 2771.435\\n"
+  "      y: -0.43438956\\n"
+  "      z: 0.0\\n"
+  "    }\\n"
+  "    rotation {\\n"
+  "      x: 0.0\\n"
+  "      y: 0.0\\n"
+  "      z: 0.0\\n"
+  "      w: 1.0\\n"
+  "    }\\n"
+  "    index: 0\\n"
+  "    count: 3\\n"
+  "  }\\n"
+  "  shapes {\\n"
+  "    shape_type: TYPE_BOX\\n"
+  "    position {\\n"
+  "      x: 1.708459\\n"
+  "      y: 244.34558\\n"
+  "      z: 0.0\\n"
+  "    }\\n"
+  "    rotation {\\n"
+  "      x: 0.0\\n"
+  "      y: 0.0\\n"
+  "      z: 0.70710677\\n"
+  "      w: 0.70710677\\n"
+  "    }\\n"
+  "    index: 3\\n"
+  "    count: 3\\n"
+  "  }\\n"
+  "  shapes {\\n"
+  "    shape_type: TYPE_BOX\\n"
+  "    position {\\n"
+  "      x: 5711.498\\n"
+  "      y: 256.8889\\n"
+  "      z: 0.0\\n"
+  "    }\\n"
+  "    rotation {\\n"
+  "      x: 0.0\\n"
+  "      y: 0.0\\n"
+  "      z: 0.70710677\\n"
+  "      w: 0.70710677\\n"
+  "    }\\n"
+  "    index: 6\\n"
+  "    count: 3\\n"
+  "  }\\n"
+  "  data: 2842.028\\n"
+  "  data: 10.0\\n"
+  "  data: 10.0\\n"
+  "  data: 250.0\\n"
+  "  data: 10.0\\n"
+  "  data: 10.0\\n"
+  "  data: 250.0\\n"
+  "  data: 10.0\\n"
+  "  data: 10.0\\n"
+  "}\\n"
+  "linear_damping: 0.0\\n"
+  "angular_damping: 0.0\\n"
+  "locked_rotation: false\\n"
+  "\"\n"
+  "  position {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "    w: 1.0\n"
+  "  }\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"ground_part1\"\n"
+  "  type: \"collisionobject\"\n"
+  "  data: \"collision_shape: \\\"\\\"\\n"
+  "type: COLLISION_OBJECT_TYPE_STATIC\\n"
+  "mass: 0.0\\n"
+  "friction: 0.1\\n"
+  "restitution: 0.5\\n"
+  "group: \\\"geometry\\\"\\n"
+  "mask: \\\"player\\\"\\n"
+  "embedded_collision_shape {\\n"
+  "  shapes {\\n"
+  "    shape_type: TYPE_BOX\\n"
+  "    position {\\n"
+  "      x: 17.656435\\n"
+  "      y: 271.46768\\n"
+  "      z: 0.0\\n"
+  "    }\\n"
+  "    rotation {\\n"
+  "      x: 0.0\\n"
+  "      y: 0.0\\n"
+  "      z: 0.0\\n"
+  "      w: 1.0\\n"
+  "    }\\n"
+  "    index: 0\\n"
+  "    count: 3\\n"
+  "  }\\n"
+  "  shapes {\\n"
+  "    shape_type: TYPE_BOX\\n"
+  "    position {\\n"
+  "      x: 41.934032\\n"
+  "      y: 169.94319\\n"
+  "      z: 0.0\\n"
+  "    }\\n"
+  "    rotation {\\n"
+  "      x: 0.0\\n"
+  "      y: 0.0\\n"
+  "      z: -0.6742879\\n"
+  "      w: 0.7384686\\n"
+  "    }\\n"
+  "    index: 3\\n"
+  "    count: 3\\n"
+  "  }\\n"
+  "  shapes {\\n"
+  "    shape_type: TYPE_BOX\\n"
+  "    position {\\n"
+  "      x: 70.62574\\n"
+  "      y: 105.938614\\n"
+  "      z: 0.0\\n"
+  "    }\\n"
+  "    rotation {\\n"
+  "      x: 0.0\\n"
+  "      y: 0.0\\n"
+  "      z: -0.35227424\\n"
+  "      w: 0.9358968\\n"
+  "    }\\n"
+  "    index: 6\\n"
+  "    count: 3\\n"
+  "  }\\n"
+  "  shapes {\\n"
+  "    shape_type: TYPE_BOX\\n"
+  "    position {\\n"
+  "      x: 136.83737\\n"
+  "      y: 68.418686\\n"
+  "      z: 0.0\\n"
+  "    }\\n"
+  "    rotation {\\n"
+  "      x: 0.0\\n"
+  "      y: 0.0\\n"
+  "      z: 0.14943813\\n"
+  "      w: 0.9887711\\n"
+  "    }\\n"
+  "    index: 9\\n"
+  "    count: 3\\n"
+  "  }\\n"
+  "  shapes {\\n"
+  "    shape_type: TYPE_BOX\\n"
+  "    position {\\n"
+  "      x: 172.15024\\n"
+  "      y: 79.45396\\n"
+  "      z: 0.0\\n"
+  "    }\\n"
+  "    rotation {\\n"
+  "      x: 0.0\\n"
+  "      y: 0.0\\n"
+  "      z: -0.08987855\\n"
+  "      w: 0.9959527\\n"
+  "    }\\n"
+  "    index: 12\\n"
+  "    count: 3\\n"
+  "  }\\n"
+  "  shapes {\\n"
+  "    shape_type: TYPE_BOX\\n"
+  "    position {\\n"
+  "      x: 335.47226\\n"
+  "      y: 68.418686\\n"
+  "      z: 0.0\\n"
+  "    }\\n"
+  "    rotation {\\n"
+  "      x: 0.0\\n"
+  "      y: 0.0\\n"
+  "      z: 0.13954312\\n"
+  "      w: 0.990216\\n"
+  "    }\\n"
+  "    index: 15\\n"
+  "    count: 3\\n"
+  "  }\\n"
+  "  shapes {\\n"
+  "    shape_type: TYPE_BOX\\n"
+  "    position {\\n"
+  "      x: 381.8204\\n"
+  "      y: 70.62574\\n"
+  "      z: 0.0\\n"
+  "    }\\n"
+  "    rotation {\\n"
+  "      x: 0.0\\n"
+  "      y: 0.0\\n"
+  "      z: -0.06994285\\n"
+  "      w: 0.997551\\n"
+  "    }\\n"
+  "    index: 18\\n"
+  "    count: 3\\n"
+  "  }\\n"
+  "  shapes {\\n"
+  "    shape_type: TYPE_BOX\\n"
+  "    position {\\n"
+  "      x: 425.96152\\n"
+  "      y: 90.48923\\n"
+  "      z: 0.0\\n"
+  "    }\\n"
+  "    rotation {\\n"
+  "      x: 0.0\\n"
+  "      y: 0.0\\n"
+  "      z: -0.9320391\\n"
+  "      w: 0.36235777\\n"
+  "    }\\n"
+  "    index: 21\\n"
+  "    count: 3\\n"
+  "  }\\n"
+  "  shapes {\\n"
+  "    shape_type: TYPE_BOX\\n"
+  "    position {\\n"
+  "      x: 465.68848\\n"
+  "      y: 134.63033\\n"
+  "      z: 0.0\\n"
+  "    }\\n"
+  "    rotation {\\n"
+  "      x: 0.0\\n"
+  "      y: 0.0\\n"
+  "      z: -0.87235546\\n"
+  "      w: 0.48887208\\n"
+  "    }\\n"
+  "    index: 24\\n"
+  "    count: 3\\n"
+  "  }\\n"
+  "  shapes {\\n"
+  "    shape_type: TYPE_BOX\\n"
+  "    position {\\n"
+  "      x: 518.6578\\n"
+  "      y: 152.28676\\n"
+  "      z: 0.0\\n"
+  "    }\\n"
+  "    rotation {\\n"
+  "      x: 0.0\\n"
+  "      y: 0.0\\n"
+  "      z: -0.0799147\\n"
+  "      w: 0.99680173\\n"
+  "    }\\n"
+  "    index: 27\\n"
+  "    count: 3\\n"
+  "  }\\n"
+  "  shapes {\\n"
+  "    shape_type: TYPE_BOX\\n"
+  "    position {\\n"
+  "      x: 571.6271\\n"
+  "      y: 141.25148\\n"
+  "      z: 0.0\\n"
+  "    }\\n"
+  "    rotation {\\n"
+  "      x: 0.0\\n"
+  "      y: 0.0\\n"
+  "      z: -0.19866933\\n"
+  "      w: 0.9800666\\n"
+  "    }\\n"
+  "    index: 30\\n"
+  "    count: 3\\n"
+  "  }\\n"
+  "  shapes {\\n"
+  "    shape_type: TYPE_BOX\\n"
+  "    position {\\n"
+  "      x: 600.3188\\n"
+  "      y: 165.52908\\n"
+  "      z: 0.0\\n"
+  "    }\\n"
+  "    rotation {\\n"
+  "      x: 0.0\\n"
+  "      y: 0.0\\n"
+  "      z: -0.75784254\\n"
+  "      w: 0.65243745\\n"
+  "    }\\n"
+  "    index: 33\\n"
+  "    count: 3\\n"
+  "  }\\n"
+  "  shapes {\\n"
+  "    shape_type: TYPE_BOX\\n"
+  "    position {\\n"
+  "      x: 657.7022\\n"
+  "      y: 216.29134\\n"
+  "      z: 0.0\\n"
+  "    }\\n"
+  "    rotation {\\n"
+  "      x: 0.0\\n"
+  "      y: 0.0\\n"
+  "      z: 0.14943813\\n"
+  "      w: 0.9887711\\n"
+  "    }\\n"
+  "    index: 36\\n"
+  "    count: 3\\n"
+  "  }\\n"
+  "  shapes {\\n"
+  "    shape_type: TYPE_BOX\\n"
+  "    position {\\n"
+  "      x: 712.81934\\n"
+  "      y: 228.42026\\n"
+  "      z: 0.0\\n"
+  "    }\\n"
+  "    rotation {\\n"
+  "      x: 0.0\\n"
+  "      y: 0.0\\n"
+  "      z: 0.0\\n"
+  "      w: 1.0\\n"
+  "    }\\n"
+  "    index: 39\\n"
+  "    count: 3\\n"
+  "  }\\n"
+  "  data: 49.72698\\n"
+  "  data: 10.0\\n"
+  "  data: 10.0\\n"
+  "  data: 93.125694\\n"
+  "  data: 7.802037\\n"
+  "  data: 10.0\\n"
+  "  data: 71.79752\\n"
+  "  data: 7.7929454\\n"
+  "  data: 10.0\\n"
+  "  data: 40.170944\\n"
+  "  data: 10.0\\n"
+  "  data: 10.0\\n"
+  "  data: 14.342793\\n"
+  "  data: 10.0\\n"
+  "  data: 10.0\\n"
+  "  data: 26.358881\\n"
+  "  data: 10.0\\n"
+  "  data: 10.0\\n"
+  "  data: 29.86349\\n"
+  "  data: 10.0\\n"
+  "  data: 10.0\\n"
+  "  data: 34.94602\\n"
+  "  data: 6.745064\\n"
+  "  data: 10.0\\n"
+  "  data: 34.2776\\n"
+  "  data: 5.5858912\\n"
+  "  data: 10.0\\n"
+  "  data: 36.597412\\n"
+  "  data: 10.0\\n"
+  "  data: 10.0\\n"
+  "  data: 27.656435\\n"
+  "  data: 10.0\\n"
+  "  data: 10.0\\n"
+  "  data: 43.105816\\n"
+  "  data: 5.5858912\\n"
+  "  data: 10.0\\n"
+  "  data: 62.969307\\n"
+  "  data: 7.7929454\\n"
+  "  data: 10.0\\n"
+  "  data: 10.0\\n"
+  "  data: 10.0\\n"
+  "  data: 10.0\\n"
+  "}\\n"
+  "linear_damping: 0.0\\n"
+  "angular_damping: 0.0\\n"
+  "locked_rotation: false\\n"
+  "\"\n"
+  "  position {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "    w: 1.0\n"
+  "  }\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"ground_part2\"\n"
+  "  type: \"collisionobject\"\n"
+  "  data: \"collision_shape: \\\"\\\"\\n"
+  "type: COLLISION_OBJECT_TYPE_STATIC\\n"
+  "mass: 0.0\\n"
+  "friction: 0.1\\n"
+  "restitution: 0.5\\n"
+  "group: \\\"geometry\\\"\\n"
+  "mask: \\\"player\\\"\\n"
+  "embedded_collision_shape {\\n"
+  "  shapes {\\n"
+  "    shape_type: TYPE_BOX\\n"
+  "    position {\\n"
+  "      x: 953.4475\\n"
+  "      y: 30.898762\\n"
+  "      z: 0.0\\n"
+  "    }\\n"
+  "    rotation {\\n"
+  "      x: 0.0\\n"
+  "      y: 0.0\\n"
+  "      z: -0.019998666\\n"
+  "      w: 0.9998\\n"
+  "    }\\n"
+  "    index: 0\\n"
+  "    count: 3\\n"
+  "  }\\n"
+  "  shapes {\\n"
+  "    shape_type: TYPE_BOX\\n"
+  "    position {\\n"
+  "      x: 1374.9949\\n"
+  "      y: 35.31287\\n"
+  "      z: 0.0\\n"
+  "    }\\n"
+  "    rotation {\\n"
+  "      x: 0.0\\n"
+  "      y: 0.0\\n"
+  "      z: -0.019998666\\n"
+  "      w: 0.9998\\n"
+  "    }\\n"
+  "    index: 3\\n"
+  "    count: 3\\n"
+  "  }\\n"
+  "  shapes {\\n"
+  "    shape_type: TYPE_BOX\\n"
+  "    position {\\n"
+  "      x: 1669.7767\\n"
+  "      y: 79.627144\\n"
+  "      z: 0.0\\n"
+  "    }\\n"
+  "    rotation {\\n"
+  "      x: 0.0\\n"
+  "      y: 0.0\\n"
+  "      z: -0.029995501\\n"
+  "      w: 0.99955004\\n"
+  "    }\\n"
+  "    index: 6\\n"
+  "    count: 3\\n"
+  "  }\\n"
+  "  shapes {\\n"
+  "    shape_type: TYPE_BOX\\n"
+  "    position {\\n"
+  "      x: 1945.0145\\n"
+  "      y: 46.924355\\n"
+  "      z: 0.0\\n"
+  "    }\\n"
+  "    rotation {\\n"
+  "      x: 0.0\\n"
+  "      y: 0.0\\n"
+  "      z: 0.32404304\\n"
+  "      w: 0.94604236\\n"
+  "    }\\n"
+  "    index: 9\\n"
+  "    count: 3\\n"
+  "  }\\n"
+  "  shapes {\\n"
+  "    shape_type: TYPE_BOX\\n"
+  "    position {\\n"
+  "      x: 1984.9003\\n"
+  "      y: 56.309227\\n"
+  "      z: 0.0\\n"
+  "    }\\n"
+  "    rotation {\\n"
+  "      x: 0.0\\n"
+  "      y: 0.0\\n"
+  "      z: -0.019998666\\n"
+  "      w: 0.9998\\n"
+  "    }\\n"
+  "    index: 12\\n"
+  "    count: 3\\n"
+  "  }\\n"
+  "  shapes {\\n"
+  "    shape_type: TYPE_BOX\\n"
+  "    position {\\n"
+  "      x: 2055.2869\\n"
+  "      y: 105.579796\\n"
+  "      z: 0.0\\n"
+  "    }\\n"
+  "    rotation {\\n"
+  "      x: 0.0\\n"
+  "      y: 0.0\\n"
+  "      z: -0.9086335\\n"
+  "      w: 0.4175945\\n"
+  "    }\\n"
+  "    index: 15\\n"
+  "    count: 3\\n"
+  "  }\\n"
+  "  shapes {\\n"
+  "    shape_type: TYPE_BOX\\n"
+  "    position {\\n"
+  "      x: 2057.633\\n"
+  "      y: 117.31089\\n"
+  "      z: 0.0\\n"
+  "    }\\n"
+  "    rotation {\\n"
+  "      x: 0.0\\n"
+  "      y: 0.0\\n"
+  "      z: 0.6051864\\n"
+  "      w: 0.7960838\\n"
+  "    }\\n"
+  "    index: 18\\n"
+  "    count: 3\\n"
+  "  }\\n"
+  "  shapes {\\n"
+  "    shape_type: TYPE_BOX\\n"
+  "    position {\\n"
+  "      x: 2109.2498\\n"
+  "      y: 161.88902\\n"
+  "      z: 0.0\\n"
+  "    }\\n"
+  "    rotation {\\n"
+  "      x: 0.0\\n"
+  "      y: 0.0\\n"
+  "      z: 0.04997917\\n"
+  "      w: 0.99875027\\n"
+  "    }\\n"
+  "    index: 21\\n"
+  "    count: 3\\n"
+  "  }\\n"
+  "  shapes {\\n"
+  "    shape_type: TYPE_BOX\\n"
+  "    position {\\n"
+  "      x: 2160.8665\\n"
+  "      y: 154.85037\\n"
+  "      z: 0.0\\n"
+  "    }\\n"
+  "    rotation {\\n"
+  "      x: 0.0\\n"
+  "      y: 0.0\\n"
+  "      z: -0.099833414\\n"
+  "      w: 0.9950042\\n"
+  "    }\\n"
+  "    index: 24\\n"
+  "    count: 3\\n"
+  "  }\\n"
+  "  shapes {\\n"
+  "    shape_type: TYPE_BOX\\n"
+  "    position {\\n"
+  "      x: 2189.0212\\n"
+  "      y: 190.04364\\n"
+  "      z: 0.0\\n"
+  "    }\\n"
+  "    rotation {\\n"
+  "      x: 0.0\\n"
+  "      y: 0.0\\n"
+  "      z: 0.68892145\\n"
+  "      w: 0.724836\\n"
+  "    }\\n"
+  "    index: 27\\n"
+  "    count: 3\\n"
+  "  }\\n"
+  "  shapes {\\n"
+  "    shape_type: TYPE_BOX\\n"
+  "    position {\\n"
+  "      x: 2231.2532\\n"
+  "      y: 244.00665\\n"
+  "      z: 0.0\\n"
+  "    }\\n"
+  "    rotation {\\n"
+  "      x: 0.0\\n"
+  "      y: 0.0\\n"
+  "      z: 0.24740396\\n"
+  "      w: 0.9689124\\n"
+  "    }\\n"
+  "    index: 30\\n"
+  "    count: 3\\n"
+  "  }\\n"
+  "  shapes {\\n"
+  "    shape_type: TYPE_BOX\\n"
+  "    position {\\n"
+  "      x: 2287.5623\\n"
+  "      y: 269.81503\\n"
+  "      z: 0.0\\n"
+  "    }\\n"
+  "    rotation {\\n"
+  "      x: 0.0\\n"
+  "      y: 0.0\\n"
+  "      z: 0.0\\n"
+  "      w: 1.0\\n"
+  "    }\\n"
+  "    index: 33\\n"
+  "    count: 3\\n"
+  "  }\\n"
+  "  shapes {\\n"
+  "    shape_type: TYPE_BOX\\n"
+  "    position {\\n"
+  "      x: 1785.507\\n"
+  "      y: 40.100803\\n"
+  "      z: 0.0\\n"
+  "    }\\n"
+  "    rotation {\\n"
+  "      x: 0.0\\n"
+  "      y: 0.0\\n"
+  "      z: -0.029995501\\n"
+  "      w: 0.99955004\\n"
+  "    }\\n"
+  "    index: 36\\n"
+  "    count: 3\\n"
+  "  }\\n"
+  "  data: 126.97035\\n"
+  "  data: 5.67415\\n"
+  "  data: 10.0\\n"
+  "  data: 126.97035\\n"
+  "  data: 5.67415\\n"
+  "  data: 10.0\\n"
+  "  data: 21.94458\\n"
+  "  data: 7.355307\\n"
+  "  data: 10.0\\n"
+  "  data: 19.38487\\n"
+  "  data: 10.0\\n"
+  "  data: 10.0\\n"
+  "  data: 33.462177\\n"
+  "  data: 7.6537824\\n"
+  "  data: 10.0\\n"
+  "  data: 71.00166\\n"
+  "  data: 7.6537824\\n"
+  "  data: 10.0\\n"
+  "  data: 45.193268\\n"
+  "  data: 10.0\\n"
+  "  data: 10.0\\n"
+  "  data: 45.193268\\n"
+  "  data: 7.6537824\\n"
+  "  data: 10.0\\n"
+  "  data: 19.38487\\n"
+  "  data: 10.0\\n"
+  "  data: 10.0\\n"
+  "  data: 40.50083\\n"
+  "  data: 10.0\\n"
+  "  data: 10.0\\n"
+  "  data: 56.613102\\n"
+  "  data: 10.0\\n"
+  "  data: 10.0\\n"
+  "  data: 17.038652\\n"
+  "  data: 10.0\\n"
+  "  data: 10.0\\n"
+  "  data: 21.94458\\n"
+  "  data: 7.355307\\n"
+  "  data: 10.0\\n"
+  "}\\n"
+  "linear_damping: 0.0\\n"
+  "angular_damping: 0.0\\n"
+  "locked_rotation: false\\n"
+  "\"\n"
+  "  position {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "    w: 1.0\n"
+  "  }\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"ground_part3\"\n"
+  "  type: \"collisionobject\"\n"
+  "  data: \"collision_shape: \\\"\\\"\\n"
+  "type: COLLISION_OBJECT_TYPE_STATIC\\n"
+  "mass: 0.0\\n"
+  "friction: 0.1\\n"
+  "restitution: 0.5\\n"
+  "group: \\\"geometry\\\"\\n"
+  "mask: \\\"player\\\"\\n"
+  "embedded_collision_shape {\\n"
+  "  shapes {\\n"
+  "    shape_type: TYPE_BOX\\n"
+  "    position {\\n"
+  "      x: 2386.6714\\n"
+  "      y: 287.41498\\n"
+  "      z: 0.0\\n"
+  "    }\\n"
+  "    rotation {\\n"
+  "      x: 0.0\\n"
+  "      y: 0.0\\n"
+  "      z: 0.19866933\\n"
+  "      w: 0.9800666\\n"
+  "    }\\n"
+  "    index: 0\\n"
+  "    count: 3\\n"
+  "  }\\n"
+  "  shapes {\\n"
+  "    shape_type: TYPE_BOX\\n"
+  "    position {\\n"
+  "      x: 2457.1162\\n"
+  "      y: 309.9573\\n"
+  "      z: 0.0\\n"
+  "    }\\n"
+  "    rotation {\\n"
+  "      x: 0.0\\n"
+  "      y: 0.0\\n"
+  "      z: 0.15931821\\n"
+  "      w: 0.98722726\\n"
+  "    }\\n"
+  "    index: 3\\n"
+  "    count: 3\\n"
+  "  }\\n"
+  "  shapes {\\n"
+  "    shape_type: TYPE_BOX\\n"
+  "    position {\\n"
+  "      x: 2513.4722\\n"
+  "      y: 349.40643\\n"
+  "      z: 0.0\\n"
+  "    }\\n"
+  "    rotation {\\n"
+  "      x: 0.0\\n"
+  "      y: 0.0\\n"
+  "      z: 0.15931821\\n"
+  "      w: 0.98722726\\n"
+  "    }\\n"
+  "    index: 6\\n"
+  "    count: 3\\n"
+  "  }\\n"
+  "  shapes {\\n"
+  "    shape_type: TYPE_BOX\\n"
+  "    position {\\n"
+  "      x: 2612.095\\n"
+  "      y: 357.8598\\n"
+  "      z: 0.0\\n"
+  "    }\\n"
+  "    rotation {\\n"
+  "      x: 0.0\\n"
+  "      y: 0.0\\n"
+  "      z: 0.029995501\\n"
+  "      w: 0.99955004\\n"
+  "    }\\n"
+  "    index: 9\\n"
+  "    count: 3\\n"
+  "  }\\n"
+  "  shapes {\\n"
+  "    shape_type: TYPE_BOX\\n"
+  "    position {\\n"
+  "      x: 2682.5398\\n"
+  "      y: 369.13098\\n"
+  "      z: 0.0\\n"
+  "    }\\n"
+  "    rotation {\\n"
+  "      x: 0.0\\n"
+  "      y: 0.0\\n"
+  "      z: 0.19866933\\n"
+  "      w: 0.9800666\\n"
+  "    }\\n"
+  "    index: 12\\n"
+  "    count: 3\\n"
+  "  }\\n"
+  "  shapes {\\n"
+  "    shape_type: TYPE_BOX\\n"
+  "    position {\\n"
+  "      x: 2799.1829\\n"
+  "      y: 487.2923\\n"
+  "      z: 0.0\\n"
+  "    }\\n"
+  "    rotation {\\n"
+  "      x: 0.0\\n"
+  "      y: 0.0\\n"
+  "      z: 0.15931821\\n"
+  "      w: 0.98722726\\n"
+  "    }\\n"
+  "    index: 15\\n"
+  "    count: 3\\n"
+  "  }\\n"
+  "  shapes {\\n"
+  "    shape_type: TYPE_BOX\\n"
+  "    position {\\n"
+  "      x: 2865.504\\n"
+  "      y: 506.7267\\n"
+  "      z: 0.0\\n"
+  "    }\\n"
+  "    rotation {\\n"
+  "      x: 0.0\\n"
+  "      y: 0.0\\n"
+  "      z: 0.099833414\\n"
+  "      w: 0.9950042\\n"
+  "    }\\n"
+  "    index: 18\\n"
+  "    count: 3\\n"
+  "  }\\n"
+  "  shapes {\\n"
+  "    shape_type: TYPE_BOX\\n"
+  "    position {\\n"
+  "      x: 3024.7573\\n"
+  "      y: 534.1566\\n"
+  "      z: 0.0\\n"
+  "    }\\n"
+  "    rotation {\\n"
+  "      x: 0.0\\n"
+  "      y: 0.0\\n"
+  "      z: 0.25708055\\n"
+  "      w: 0.96638995\\n"
+  "    }\\n"
+  "    index: 21\\n"
+  "    count: 3\\n"
+  "  }\\n"
+  "  shapes {\\n"
+  "    shape_type: TYPE_BOX\\n"
+  "    position {\\n"
+  "      x: 3076.8733\\n"
+  "      y: 556.69104\\n"
+  "      z: 0.0\\n"
+  "    }\\n"
+  "    rotation {\\n"
+  "      x: 0.0\\n"
+  "      y: 0.0\\n"
+  "      z: 0.0\\n"
+  "      w: 1.0\\n"
+  "    }\\n"
+  "    index: 24\\n"
+  "    count: 3\\n"
+  "  }\\n"
+  "  shapes {\\n"
+  "    shape_type: TYPE_BOX\\n"
+  "    position {\\n"
+  "      x: 3118.8096\\n"
+  "      y: 537.5843\\n"
+  "      z: 0.0\\n"
+  "    }\\n"
+  "    rotation {\\n"
+  "      x: 0.0\\n"
+  "      y: 0.0\\n"
+  "      z: -0.27635565\\n"
+  "      w: 0.96105546\\n"
+  "    }\\n"
+  "    index: 27\\n"
+  "    count: 3\\n"
+  "  }\\n"
+  "  shapes {\\n"
+  "    shape_type: TYPE_BOX\\n"
+  "    position {\\n"
+  "      x: 3308.008\\n"
+  "      y: 475.05966\\n"
+  "      z: 0.0\\n"
+  "    }\\n"
+  "    rotation {\\n"
+  "      x: 0.0\\n"
+  "      y: 0.0\\n"
+  "      z: 0.0\\n"
+  "      w: 1.0\\n"
+  "    }\\n"
+  "    index: 30\\n"
+  "    count: 3\\n"
+  "  }\\n"
+  "  shapes {\\n"
+  "    shape_type: TYPE_BOX\\n"
+  "    position {\\n"
+  "      x: 3403.0642\\n"
+  "      y: 485.06555\\n"
+  "      z: 0.0\\n"
+  "    }\\n"
+  "    rotation {\\n"
+  "      x: 0.0\\n"
+  "      y: 0.0\\n"
+  "      z: 0.0\\n"
+  "      w: 1.0\\n"
+  "    }\\n"
+  "    index: 33\\n"
+  "    count: 3\\n"
+  "  }\\n"
+  "  shapes {\\n"
+  "    shape_type: TYPE_BOX\\n"
+  "    position {\\n"
+  "      x: 3433.082\\n"
+  "      y: 500.07443\\n"
+  "      z: 0.0\\n"
+  "    }\\n"
+  "    rotation {\\n"
+  "      x: 0.0\\n"
+  "      y: 0.0\\n"
+  "      z: 0.0\\n"
+  "      w: 1.0\\n"
+  "    }\\n"
+  "    index: 36\\n"
+  "    count: 3\\n"
+  "  }\\n"
+  "  shapes {\\n"
+  "    shape_type: TYPE_BOX\\n"
+  "    position {\\n"
+  "      x: 3503.1233\\n"
+  "      y: 485.06555\\n"
+  "      z: 0.0\\n"
+  "    }\\n"
+  "    rotation {\\n"
+  "      x: 0.0\\n"
+  "      y: 0.0\\n"
+  "      z: 0.0\\n"
+  "      w: 1.0\\n"
+  "    }\\n"
+  "    index: 39\\n"
+  "    count: 3\\n"
+  "  }\\n"
+  "  shapes {\\n"
+  "    shape_type: TYPE_BOX\\n"
+  "    position {\\n"
+  "      x: 3553.1528\\n"
+  "      y: 475.05966\\n"
+  "      z: 0.0\\n"
+  "    }\\n"
+  "    rotation {\\n"
+  "      x: 0.0\\n"
+  "      y: 0.0\\n"
+  "      z: 0.0\\n"
+  "      w: 1.0\\n"
+  "    }\\n"
+  "    index: 42\\n"
+  "    count: 3\\n"
+  "  }\\n"
+  "  data: 21.271175\\n"
+  "  data: 10.0\\n"
+  "  data: 10.0\\n"
+  "  data: 60.720287\\n"
+  "  data: 10.0\\n"
+  "  data: 10.0\\n"
+  "  data: 60.720287\\n"
+  "  data: 10.0\\n"
+  "  data: 10.0\\n"
+  "  data: 60.720287\\n"
+  "  data: 10.0\\n"
+  "  data: 10.0\\n"
+  "  data: 21.271175\\n"
+  "  data: 10.0\\n"
+  "  data: 10.0\\n"
+  "  data: 46.63852\\n"
+  "  data: 10.0\\n"
+  "  data: 10.0\\n"
+  "  data: 38.547985\\n"
+  "  data: 10.0\\n"
+  "  data: 10.0\\n"
+  "  data: 37.25384\\n"
+  "  data: 10.0\\n"
+  "  data: 10.0\\n"
+  "  data: 27.907618\\n"
+  "  data: 10.0\\n"
+  "  data: 10.0\\n"
+  "  data: 38.725876\\n"
+  "  data: 10.0\\n"
+  "  data: 10.0\\n"
+  "  data: 49.122646\\n"
+  "  data: 10.0\\n"
+  "  data: 10.0\\n"
+  "  data: 49.122646\\n"
+  "  data: 10.0\\n"
+  "  data: 10.0\\n"
+  "  data: 49.122646\\n"
+  "  data: 10.0\\n"
+  "  data: 10.0\\n"
+  "  data: 49.122646\\n"
+  "  data: 10.0\\n"
+  "  data: 10.0\\n"
+  "  data: 49.122646\\n"
+  "  data: 10.0\\n"
+  "  data: 10.0\\n"
+  "}\\n"
+  "linear_damping: 0.0\\n"
+  "angular_damping: 0.0\\n"
+  "locked_rotation: false\\n"
+  "\"\n"
+  "  position {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "    w: 1.0\n"
+  "  }\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"ground_part4\"\n"
+  "  type: \"collisionobject\"\n"
+  "  data: \"collision_shape: \\\"\\\"\\n"
+  "type: COLLISION_OBJECT_TYPE_STATIC\\n"
+  "mass: 0.0\\n"
+  "friction: 0.1\\n"
+  "restitution: 0.5\\n"
+  "group: \\\"geometry\\\"\\n"
+  "mask: \\\"player\\\"\\n"
+  "embedded_collision_shape {\\n"
+  "  shapes {\\n"
+  "    shape_type: TYPE_BOX\\n"
+  "    position {\\n"
+  "      x: 3745.2827\\n"
+  "      y: 469.01477\\n"
+  "      z: 0.0\\n"
+  "    }\\n"
+  "    rotation {\\n"
+  "      x: 0.0\\n"
+  "      y: 0.0\\n"
+  "      z: 0.12963414\\n"
+  "      w: 0.9915619\\n"
+  "    }\\n"
+  "    index: 0\\n"
+  "    count: 3\\n"
+  "  }\\n"
+  "  shapes {\\n"
+  "    shape_type: TYPE_BOX\\n"
+  "    position {\\n"
+  "      x: 3859.1267\\n"
+  "      y: 492.73227\\n"
+  "      z: 0.0\\n"
+  "    }\\n"
+  "    rotation {\\n"
+  "      x: 0.0\\n"
+  "      y: 0.0\\n"
+  "      z: 0.12963414\\n"
+  "      w: 0.9915619\\n"
+  "    }\\n"
+  "    index: 3\\n"
+  "    count: 3\\n"
+  "  }\\n"
+  "  shapes {\\n"
+  "    shape_type: TYPE_BOX\\n"
+  "    position {\\n"
+  "      x: 3994.0244\\n"
+  "      y: 308.3273\\n"
+  "      z: 0.0\\n"
+  "    }\\n"
+  "    rotation {\\n"
+  "      x: 0.0\\n"
+  "      y: 0.0\\n"
+  "      z: 0.04997917\\n"
+  "      w: 0.99875027\\n"
+  "    }\\n"
+  "    index: 6\\n"
+  "    count: 3\\n"
+  "  }\\n"
+  "  shapes {\\n"
+  "    shape_type: TYPE_BOX\\n"
+  "    position {\\n"
+  "      x: 4242.539\\n"
+  "      y: 140.74841\\n"
+  "      z: 0.0\\n"
+  "    }\\n"
+  "    rotation {\\n"
+  "      x: 0.0\\n"
+  "      y: 0.0\\n"
+  "      z: -0.87235546\\n"
+  "      w: 0.48887208\\n"
+  "    }\\n"
+  "    index: 9\\n"
+  "    count: 3\\n"
+  "  }\\n"
+  "  shapes {\\n"
+  "    shape_type: TYPE_BOX\\n"
+  "    position {\\n"
+  "      x: 4324.2217\\n"
+  "      y: 215.92696\\n"
+  "      z: 0.0\\n"
+  "    }\\n"
+  "    rotation {\\n"
+  "      x: 0.0\\n"
+  "      y: 0.0\\n"
+  "      z: 0.0799147\\n"
+  "      w: 0.99680173\\n"
+  "    }\\n"
+  "    index: 12\\n"
+  "    count: 3\\n"
+  "  }\\n"
+  "  shapes {\\n"
+  "    shape_type: TYPE_BOX\\n"
+  "    position {\\n"
+  "      x: 4353.7324\\n"
+  "      y: 238.63332\\n"
+  "      z: 0.0\\n"
+  "    }\\n"
+  "    rotation {\\n"
+  "      x: 0.0\\n"
+  "      y: 0.0\\n"
+  "      z: -0.7512804\\n"
+  "      w: 0.65998316\\n"
+  "    }\\n"
+  "    index: 15\\n"
+  "    count: 3\\n"
+  "  }\\n"
+  "  shapes {\\n"
+  "    shape_type: TYPE_BOX\\n"
+  "    position {\\n"
+  "      x: 4410.441\\n"
+  "      y: 288.03824\\n"
+  "      z: 0.0\\n"
+  "    }\\n"
+  "    rotation {\\n"
+  "      x: 0.0\\n"
+  "      y: 0.0\\n"
+  "      z: 0.0\\n"
+  "      w: 1.0\\n"
+  "    }\\n"
+  "    index: 18\\n"
+  "    count: 3\\n"
+  "  }\\n"
+  "  shapes {\\n"
+  "    shape_type: TYPE_BOX\\n"
+  "    position {\\n"
+  "      x: 4415.884\\n"
+  "      y: 315.816\\n"
+  "      z: 0.0\\n"
+  "    }\\n"
+  "    rotation {\\n"
+  "      x: 0.0\\n"
+  "      y: 0.0\\n"
+  "      z: 0.40776044\\n"
+  "      w: 0.9130889\\n"
+  "    }\\n"
+  "    index: 21\\n"
+  "    count: 3\\n"
+  "  }\\n"
+  "  shapes {\\n"
+  "    shape_type: TYPE_BOX\\n"
+  "    position {\\n"
+  "      x: 4526.564\\n"
+  "      y: 380.00757\\n"
+  "      z: 0.0\\n"
+  "    }\\n"
+  "    rotation {\\n"
+  "      x: 0.0\\n"
+  "      y: 0.0\\n"
+  "      z: 0.21822962\\n"
+  "      w: 0.97589743\\n"
+  "    }\\n"
+  "    index: 24\\n"
+  "    count: 3\\n"
+  "  }\\n"
+  "  shapes {\\n"
+  "    shape_type: TYPE_BOX\\n"
+  "    position {\\n"
+  "      x: 4695.503\\n"
+  "      y: 430.80753\\n"
+  "      z: 0.0\\n"
+  "    }\\n"
+  "    rotation {\\n"
+  "      x: 0.0\\n"
+  "      y: 0.0\\n"
+  "      z: 0.04997917\\n"
+  "      w: 0.99875027\\n"
+  "    }\\n"
+  "    index: 27\\n"
+  "    count: 3\\n"
+  "  }\\n"
+  "  shapes {\\n"
+  "    shape_type: TYPE_BOX\\n"
+  "    position {\\n"
+  "      x: 4768.168\\n"
+  "      y: 453.16605\\n"
+  "      z: 0.0\\n"
+  "    }\\n"
+  "    rotation {\\n"
+  "      x: 0.0\\n"
+  "      y: 0.0\\n"
+  "      z: 0.04997917\\n"
+  "      w: 0.99875027\\n"
+  "    }\\n"
+  "    index: 30\\n"
+  "    count: 3\\n"
+  "  }\\n"
+  "  shapes {\\n"
+  "    shape_type: TYPE_BOX\\n"
+  "    position {\\n"
+  "      x: 4763.277\\n"
+  "      y: 429.36578\\n"
+  "      z: 0.0\\n"
+  "    }\\n"
+  "    rotation {\\n"
+  "      x: 0.0\\n"
+  "      y: 0.0\\n"
+  "      z: -0.7770717\\n"
+  "      w: 0.62941206\\n"
+  "    }\\n"
+  "    index: 33\\n"
+  "    count: 3\\n"
+  "  }\\n"
+  "  shapes {\\n"
+  "    shape_type: TYPE_BOX\\n"
+  "    position {\\n"
+  "      x: 4843.7827\\n"
+  "      y: 523.28955\\n"
+  "      z: 0.0\\n"
+  "    }\\n"
+  "    rotation {\\n"
+  "      x: 0.0\\n"
+  "      y: 0.0\\n"
+  "      z: 0.24740396\\n"
+  "      w: 0.9689124\\n"
+  "    }\\n"
+  "    index: 36\\n"
+  "    count: 3\\n"
+  "  }\\n"
+  "  shapes {\\n"
+  "    shape_type: TYPE_BOX\\n"
+  "    position {\\n"
+  "      x: 4197.555\\n"
+  "      y: 111.74855\\n"
+  "      z: 0.0\\n"
+  "    }\\n"
+  "    rotation {\\n"
+  "      x: 0.0\\n"
+  "      y: 0.0\\n"
+  "      z: 0.0\\n"
+  "      w: 1.0\\n"
+  "    }\\n"
+  "    index: 39\\n"
+  "    count: 3\\n"
+  "  }\\n"
+  "  shapes {\\n"
+  "    shape_type: TYPE_BOX\\n"
+  "    position {\\n"
+  "      x: 4177.5864\\n"
+  "      y: 258.6125\\n"
+  "      z: 0.0\\n"
+  "    }\\n"
+  "    rotation {\\n"
+  "      x: 0.0\\n"
+  "      y: 0.0\\n"
+  "      z: -0.1888589\\n"
+  "      w: 0.9820042\\n"
+  "    }\\n"
+  "    index: 42\\n"
+  "    count: 3\\n"
+  "  }\\n"
+  "  data: 21.75384\\n"
+  "  data: 10.0\\n"
+  "  data: 10.0\\n"
+  "  data: 21.75384\\n"
+  "  data: 10.0\\n"
+  "  data: 10.0\\n"
+  "  data: 95.27669\\n"
+  "  data: 10.0\\n"
+  "  data: 10.0\\n"
+  "  data: 88.44853\\n"
+  "  data: 10.0\\n"
+  "  data: 10.0\\n"
+  "  data: 49.77602\\n"
+  "  data: 10.0\\n"
+  "  data: 10.0\\n"
+  "  data: 57.72666\\n"
+  "  data: 10.0\\n"
+  "  data: 10.0\\n"
+  "  data: 54.325054\\n"
+  "  data: 10.0\\n"
+  "  data: 10.0\\n"
+  "  data: 48.784424\\n"
+  "  data: 10.0\\n"
+  "  data: 10.0\\n"
+  "  data: 95.3531\\n"
+  "  data: 10.0\\n"
+  "  data: 10.0\\n"
+  "  data: 95.3531\\n"
+  "  data: 10.0\\n"
+  "  data: 10.0\\n"
+  "  data: 95.3531\\n"
+  "  data: 10.0\\n"
+  "  data: 10.0\\n"
+  "  data: 70.37956\\n"
+  "  data: 10.0\\n"
+  "  data: 10.0\\n"
+  "  data: 83.79725\\n"
+  "  data: 10.0\\n"
+  "  data: 10.0\\n"
+  "  data: 10.0\\n"
+  "  data: 10.0\\n"
+  "  data: 10.0\\n"
+  "  data: 124.03707\\n"
+  "  data: 10.0\\n"
+  "  data: 10.0\\n"
+  "}\\n"
+  "linear_damping: 0.0\\n"
+  "angular_damping: 0.0\\n"
+  "locked_rotation: false\\n"
+  "\"\n"
+  "  position {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "    w: 1.0\n"
+  "  }\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"ground_part5\"\n"
+  "  type: \"collisionobject\"\n"
+  "  data: \"collision_shape: \\\"\\\"\\n"
+  "type: COLLISION_OBJECT_TYPE_STATIC\\n"
+  "mass: 0.0\\n"
+  "friction: 0.1\\n"
+  "restitution: 0.5\\n"
+  "group: \\\"geometry\\\"\\n"
+  "mask: \\\"player\\\"\\n"
+  "embedded_collision_shape {\\n"
+  "  shapes {\\n"
+  "    shape_type: TYPE_BOX\\n"
+  "    position {\\n"
+  "      x: 4821.361\\n"
+  "      y: 531.97363\\n"
+  "      z: 0.0\\n"
+  "    }\\n"
+  "    rotation {\\n"
+  "      x: 0.0\\n"
+  "      y: 0.0\\n"
+  "      z: -0.78950375\\n"
+  "      w: 0.61374575\\n"
+  "    }\\n"
+  "    index: 0\\n"
+  "    count: 3\\n"
+  "  }\\n"
+  "  shapes {\\n"
+  "    shape_type: TYPE_BOX\\n"
+  "    position {\\n"
+  "      x: 4888.5576\\n"
+  "      y: 587.9708\\n"
+  "      z: 0.0\\n"
+  "    }\\n"
+  "    rotation {\\n"
+  "      x: 0.0\\n"
+  "      y: 0.0\\n"
+  "      z: -0.97990805\\n"
+  "      w: 0.19944972\\n"
+  "    }\\n"
+  "    index: 3\\n"
+  "    count: 3\\n"
+  "  }\\n"
+  "  shapes {\\n"
+  "    shape_type: TYPE_BOX\\n"
+  "    position {\\n"
+  "      x: 4989.4644\\n"
+  "      y: 599.8422\\n"
+  "      z: 0.0\\n"
+  "    }\\n"
+  "    rotation {\\n"
+  "      x: 0.0\\n"
+  "      y: 0.0\\n"
+  "      z: -0.9987897\\n"
+  "      w: -0.049183823\\n"
+  "    }\\n"
+  "    index: 6\\n"
+  "    count: 3\\n"
+  "  }\\n"
+  "  shapes {\\n"
+  "    shape_type: TYPE_BOX\\n"
+  "    position {\\n"
+  "      x: 5035.0464\\n"
+  "      y: 621.0092\\n"
+  "      z: 0.0\\n"
+  "    }\\n"
+  "    rotation {\\n"
+  "      x: 0.0\\n"
+  "      y: 0.0\\n"
+  "      z: -0.78950375\\n"
+  "      w: 0.61374575\\n"
+  "    }\\n"
+  "    index: 9\\n"
+  "    count: 3\\n"
+  "  }\\n"
+  "  shapes {\\n"
+  "    shape_type: TYPE_BOX\\n"
+  "    position {\\n"
+  "      x: 5092.8354\\n"
+  "      y: 652.9276\\n"
+  "      z: 0.0\\n"
+  "    }\\n"
+  "    rotation {\\n"
+  "      x: 0.0\\n"
+  "      y: 0.0\\n"
+  "      z: 0.099833414\\n"
+  "      w: 0.9950042\\n"
+  "    }\\n"
+  "    index: 12\\n"
+  "    count: 3\\n"
+  "  }\\n"
+  "  shapes {\\n"
+  "    shape_type: TYPE_BOX\\n"
+  "    position {\\n"
+  "      x: 5162.3\\n"
+  "      y: 655.93677\\n"
+  "      z: 0.0\\n"
+  "    }\\n"
+  "    rotation {\\n"
+  "      x: 0.0\\n"
+  "      y: 0.0\\n"
+  "      z: 0.1097783\\n"
+  "      w: 0.9939561\\n"
+  "    }\\n"
+  "    index: 15\\n"
+  "    count: 3\\n"
+  "  }\\n"
+  "  shapes {\\n"
+  "    shape_type: TYPE_BOX\\n"
+  "    position {\\n"
+  "      x: 5269.784\\n"
+  "      y: 683.6477\\n"
+  "      z: 0.0\\n"
+  "    }\\n"
+  "    rotation {\\n"
+  "      x: 0.0\\n"
+  "      y: 0.0\\n"
+  "      z: 0.13954312\\n"
+  "      w: 0.990216\\n"
+  "    }\\n"
+  "    index: 18\\n"
+  "    count: 3\\n"
+  "  }\\n"
+  "  shapes {\\n"
+  "    shape_type: TYPE_BOX\\n"
+  "    position {\\n"
+  "      x: 5540.395\\n"
+  "      y: 797.589\\n"
+  "      z: 0.0\\n"
+  "    }\\n"
+  "    rotation {\\n"
+  "      x: 0.0\\n"
+  "      y: 0.0\\n"
+  "      z: 0.0\\n"
+  "      w: 1.0\\n"
+  "    }\\n"
+  "    index: 21\\n"
+  "    count: 3\\n"
+  "  }\\n"
+  "  data: 32.398888\\n"
+  "  data: 10.0\\n"
+  "  data: 10.0\\n"
+  "  data: 63.401596\\n"
+  "  data: 10.0\\n"
+  "  data: 10.0\\n"
+  "  data: 63.401596\\n"
+  "  data: 10.0\\n"
+  "  data: 10.0\\n"
+  "  data: 32.398888\\n"
+  "  data: 10.0\\n"
+  "  data: 10.0\\n"
+  "  data: 57.485645\\n"
+  "  data: 10.0\\n"
+  "  data: 10.0\\n"
+  "  data: 100.61034\\n"
+  "  data: 10.0\\n"
+  "  data: 10.0\\n"
+  "  data: 88.33463\\n"
+  "  data: 10.0\\n"
+  "  data: 10.0\\n"
+  "  data: 57.20872\\n"
+  "  data: 10.0\\n"
+  "  data: 10.0\\n"
+  "}\\n"
+  "linear_damping: 0.0\\n"
+  "angular_damping: 0.0\\n"
+  "locked_rotation: false\\n"
+  "\"\n"
+  "  position {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "    w: 1.0\n"
+  "  }\n"
+  "}\n"
+  ""
+  position {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+embedded_instances {
+  id: "sounds"
+  children: "volcano"
+  data: ""
+  position {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+embedded_instances {
+  id: "view"
+  data: "components {\n"
+  "  id: \"camera\"\n"
+  "  component: \"/level/level_3/view.camera\"\n"
+  "  position {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "    w: 1.0\n"
+  "  }\n"
+  "}\n"
+  "components {\n"
+  "  id: \"script\"\n"
+  "  component: \"/level/level_3/camera.script\"\n"
+  "  position {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "    w: 1.0\n"
+  "  }\n"
+  "}\n"
+  ""
+  position {
+    x: -0.0
+    y: 0.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}

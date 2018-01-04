@@ -1,0 +1,18 @@
+images {
+  image: "/level/opening_credits/images/fade_black.png"
+}
+images {
+  image: "/level/opening_credits/images/fade_white.png"
+}
+images {
+  image: "/level/opening_credits/images/utalogo350px_fin.png"
+}
+images {
+  image: "/level/opening_credits/images/game_research_lab_logo.png"
+}
+images {
+  image: "/level/opening_credits/images/defold_logo.png"
+}
+margin: 0
+extrude_borders: 0
+inner_padding: 0

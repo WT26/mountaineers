@@ -1,0 +1,146 @@
+local input_enter = hash("proceed")
+
+
+function init(self)
+	self.timer = 0
+	self.ajastinSec = 0
+	self.ajastinTenth = 0
+	--self.titleKirjoitettu = false
+	--self.textFieldKirjoitettu = false
+	--self.proceedKirjoitettu = false
+	self.kelloKaynnissa = true
+
+	self.utaAloitettu = false
+	self.utaLogoValmis = false
+	self.utaKirkkaus = 0
+	
+	self.labLogoAloitettu = false
+	self.labLogoValmis = false
+	self.labKirkkaus = 0
+	
+
+	self.creditsValmis = false
+	
+	self.openingDone = false
+	
+	self.counter2 = 0
+	self.counter = 0	
+	self.defoldValmis = false
+	self.defoldKirkkaus = 0
+	self.defoldAloitettu = false 
+	
+	sprite.set_constant("defold_logo", "tint", vmath.vector4(1, 1, 1, 0))
+	sprite.set_constant("lab_logo", "tint", vmath.vector4(1, 1, 1, 0))
+	sprite.set_constant("uta_logo", "tint", vmath.vector4(1, 1, 1, 0))
+
+	-- Ladataan tekstitiedostoista tarvittavat tekstit.
+	-- HUOM! Muista lisätä game.project:iin custom_resourcet!
+	--self.titleString = sys.load_resource("/main/text_files/intro_title.txt")
+	--self.textFieldString = sys.load_resource("/main/text_files/intro_textfield.txt")
+    	
+	-- Inputti siihen asti että halutaan jatkaa.
+	msg.post(".", "acquire_input_focus")
+end
+
+function update(self, dt)
+	if self.openingDone == false then 
+		if not kelloKaynnissa then
+			self.timer = self.timer + 1
+		end
+		if self.timer > 2 then
+			self.ajastinTenth = self.ajastinTenth + 1
+			self.timer = 0
+		end
+		if self.ajastinTenth > 10 then
+			self.ajastinSec = self.ajastinSec + 1
+			if self.labLogoAloitettu == false then
+				self.labLogoAloitettu = true
+			end
+		end
+		
+		if self.ajastinTenth > 5 and self.utaLogoValmis == false then
+			self.utaAloitettu = true
+		end
+		
+		if self.utaAloitettu == true and self.utaLogoValmis == false then
+			self.utaKirkkaus = self.utaKirkkaus + 0.01
+			if self.utaKirkkaus > 1 then
+				self.utaKirkkaus = 1
+				self.utaLogoValmis = true
+			end
+			sprite.set_constant("uta_logo", "tint", vmath.vector4(1, 1, 1, self.utaKirkkaus))	
+		end
+		if self.labLogoAloitettu == true and self.labLogoValmis == false and self.defoldAloitettu == false then
+			self.labKirkkaus = self.labKirkkaus + 0.01
+			if self.labKirkkaus > 1 then
+				self.labKirkkaus = 1
+				self.labLogoValmis = true
+			end
+			sprite.set_constant("lab_logo", "tint", vmath.vector4(1, 1, 1, self.labKirkkaus))	
+		end
+		
+		if self.labLogoValmis == true then
+			self.counter2 = self.counter2 + 1
+		end
+		
+		if self.counter2 > 90 then
+			self.labKirkkaus = self.labKirkkaus - 0.015
+			self.utaKirkkaus = self.utaKirkkaus - 0.015
+			
+			if self.labKirkkaus < 0 then
+				self.labKirkkaus = 0
+				self.utaKirkkaus = 0
+				self.labLogoValmis = false
+				self.defoldAloitettu = true
+			end
+			sprite.set_constant("lab_logo", "tint", vmath.vector4(1, 1, 1, self.labKirkkaus))	
+			sprite.set_constant("uta_logo", "tint", vmath.vector4(1, 1, 1, self.utaKirkkaus))	
+		end
+			
+		if self.defoldAloitettu == true and self.defoldValmis == false then
+			self.defoldKirkkaus = self.defoldKirkkaus + 0.02
+			if self.defoldKirkkaus > 1 then
+				self.defoldKirkkaus = 1
+				self.defoldValmis = true
+				self.verrattavaAika = self.ajatsinSec
+			end
+			sprite.set_constant("defold_logo", "tint", vmath.vector4(1, 1, 1, self.defoldKirkkaus))
+		end
+			
+		if self.defoldValmis == true and self.creditsValmis == false then
+		
+			self.counter = self.counter + 1
+			if self.counter > 120 then
+				self.defoldKirkkaus = self.defoldKirkkaus - 0.02
+				if self.defoldKirkkaus < 0 then
+					self.defoldKirkkaus = 0
+					self.creditsValmis = true
+					self.verrattavaAika = self.ajatsinSec
+				end
+				sprite.set_constant("defold_logo", "tint", vmath.vector4(1, 1, 1, self.defoldKirkkaus))
+			end
+		end
+		
+		if self.creditsValmis == true and self.openingDone == false then
+			msg.post("worlds:/level_loader", "next_level")
+			self.openingDone = true
+		end
+	end
+end
+
+function on_message(self, message_id, message, sender)
+    -- Add message-handling code here
+    -- Remove this function if not needed
+end
+
+function on_input(self, action_id, action)
+	if action_id == input_enter and action.pressed then
+		sprite.set_constant("defold_logo", "tint", vmath.vector4(1, 1, 1, 0))
+		sprite.set_constant("lab_logo", "tint", vmath.vector4(1, 1, 1, 0))
+		sprite.set_constant("uta_logo", "tint", vmath.vector4(1, 1, 1, 0))
+		msg.post("worlds:/level_loader", "next_level")
+		self.openingDone = true
+			
+	end
+end
+

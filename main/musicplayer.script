@@ -1,0 +1,145 @@
+local input_mute = hash("mute")
+
+go.property("sfx_volume", 0.1)
+go.property("music_volume", 0.65)
+
+function init(self)
+
+	self.muted = false
+	--self.sfx_volume = 0.1
+	--self.music_volume = 1
+	
+ 	msg.post(".","acquire_input_focus")
+ 	-- start playing the background music
+  	--msg.post("/musicplayer#intro","play_sound")
+  	--msg.post("worlds:/musicplayer#sfx_running","play_sound")
+  	sound.set_group_gain(hash("running"), 1)
+  	sound.set_group_gain(hash("acoustic"), 0.00001)
+  	sound.set_group_gain(hash("saro"), 0.00001)
+  	
+  	
+  	self.levels = {"opening_credits", "start_menu", "intro", "level_1", "level_2_intro", "level_2", "level_3_intro", "level_3", "level_4_intro", "level_4", "ending", "end_credits"}
+  	
+  	-- Äänenvoimakkuuden säätäminen kaikille musicGroupeille. (sfx tai music tällä hetkellä)
+  	local groups = sound.get_groups()
+	for _,group in ipairs(groups) do
+   		if group == hash("sfx") then
+        	sound.set_group_gain(group, self.sfx_volume)
+        	
+    	elseif group == hash("music") then
+        	sound.set_group_gain(group, self.music_volume)
+        	
+       	elseif group == hash("master") then
+       		--sound.set_group_gain(group, 1)
+       	end
+    end
+    
+    msg.post("/musicplayer#music_level_1", "stop_sound")
+	msg.post("/musicplayer#intro", "stop_sound")
+    
+end
+
+function on_input(self, action_id, action)
+	if action_id == input_mute and action.pressed and not self.muted then
+		print("muted")
+		sound.set_group_gain(hash("music"), 0.00001)
+		sound.set_group_gain(hash("sfx"), 0.00001)
+		self.muted = true
+		msg.post("/gui_go", "mute_update", {muted = "True"})	
+		
+	elseif action_id == input_mute and action.pressed and self.muted then
+		print("unmuted")
+		sound.set_group_gain(hash("music"), self.music_volume)
+		sound.set_group_gain(hash("sfx"), self.sfx_volume)
+		self.muted = false
+		msg.post("/gui_go", "mute_update", {muted = "False"})	
+	end
+end
+
+function on_message(self, message_id, message, sender)
+	if message_id == hash("start_intro") then
+		msg.post("/musicplayer#intro", "play_sound")
+		
+	elseif message_id == hash("start_level_1") then
+		sound.set_group_gain(hash("sfx"), 0.6)
+		sound.set_group_gain(hash("music"), 0.50)
+		msg.post("/musicplayer", "stop_sound")
+		
+		msg.post("/musicplayer#sfx_carcrash", "stop_sound")
+		msg.post("/musicplayer#sfx_birds", "stop_sound")
+		msg.post("/musicplayer#sfx_sadetta", "stop_sound")
+		
+		msg.post("/musicplayer#intro", "stop_sound")
+		msg.post("/musicplayer#music_sad_level_1", "play_sound")
+		msg.post("/musicplayer#sfx_sade", "play_sound")
+		msg.post("/musicplayer#sfx_humina", "play_sound")
+		
+	elseif message_id == hash("start_level_2_intro") then
+		sound.set_group_gain(hash("sfx"), 0.3)
+	
+		msg.post("/musicplayer", "stop_sound")
+		msg.post("/musicplayer#music_sad_level_1", "stop_sound")
+		
+		msg.post("/musicplayer#music_level_2_intro", "play_sound")
+		
+	elseif message_id == hash("start_level_2") then
+		sound.set_group_gain(hash("sfx"), 0.2)
+		sound.set_group_gain(hash("music"), 0.50)
+		msg.post("/musicplayer", "stop_sound")
+		msg.post("/musicplayer#music_level_2_intro", "stop_sound")
+		
+		msg.post("/musicplayer#sfx_nature", "play_sound")
+		--msg.post("/musicplayer#sfx_humina", "play_sound")
+		msg.post("/musicplayer#music_treeswish", "play_sound")
+				
+	elseif message_id == hash("start_level_3_intro") then
+		sound.set_group_gain(hash("sfx"), 1)
+		sound.set_group_gain(hash("music"), 0.50)
+		msg.post("/musicplayer", "stop_sound")
+		msg.post("/musicplayer#sfx_nature", "stop_sound")
+		msg.post("/musicplayer#music_treeswish", "stop_sound")
+		
+		msg.post("/musicplayer#music_level_3_intro", "play_sound")
+		
+	elseif message_id == hash("start_level_3") then
+		sound.set_group_gain(hash("sfx"), 0.2)
+		sound.set_group_gain(hash("music"), 0.45)
+		msg.post("/musicplayer", "stop_sound")
+		msg.post("/musicplayer#music_level_3_intro", "stop_sound")
+		
+		msg.post("/musicplayer#music_level_3", "play_sound")
+		msg.post("/musicplayer#music_saro_level_3", "play_sound")
+		
+		--sound.set_group_gain(hash("music"), 1)
+		
+		--msg.post("/musicplayer#sfx_volcano", "play_sound")
+		--msg.post("/musicplayer#sfx_humina", "play_sound")
+	
+	elseif message_id == hash("start_level_4_intro") then
+		msg.post("/musicplayer", "stop_sound")
+		msg.post("/musicplayer#sfx_volcano", "stop_sound")
+		msg.post("/musicplayer#sfx_humina", "stop_sound")
+		
+		msg.post("/musicplayer#music_level_4_intro", "play_sound")
+		
+	elseif message_id == hash("start_level_4") then
+		msg.post("/musicplayer", "stop_sound")
+		msg.post("/musicplayer#music_level_4_intro", "stop_sound")
+		
+		--msg.post("/musicplayer#music_saro_level_3", "play_sound")
+		msg.post("/musicplayer#sfx_humina", "play_sound")
+		msg.post("/musicplayer#music_icecave", "play_sound")
+		
+		
+	elseif message_id == hash("start_ending") then
+		msg.post("/musicplayer", "stop_sound")
+		msg.post("/musicplayer#sfx_humina", "stop_sound")
+		msg.post("/musicplayer#music_icecave", "stop_sound")
+		
+		--msg.post("/musicplayer#music_saro_level_3", "play_sound")
+		msg.post("/musicplayer#music_end", "play_sound")
+					
+	elseif message_id == hash("stop_music") then
+		msg.post("/musicplayer", "stop_sound")
+	end
+end

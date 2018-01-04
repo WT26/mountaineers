@@ -1,0 +1,92 @@
+local input_debug = hash("debug")
+local input_debugp = hash("debugp")
+local input_nextlvl = hash("next_level")
+local input_lastlvl = hash("last_level")
+
+
+function init(self)
+	self.debug_on = 1
+	self.debug_pressed = 0
+	
+	self.coordX = 0
+	self.coordY = 0
+	self.velocityX = 0
+	self.velocityY = 0
+	--self.grounded = true
+	self.scene = 1
+	self.camera = 1
+	self.muted = "False"
+	
+	local node = gui.get_node( "box" )
+	gui.set_color( node, vmath.vector4(0, 0, 0, 0) )
+	
+	msg.post(".", "acquire_input_focus")
+end
+
+
+function on_message(self, message_id, message, sender)
+	if message_id == hash("pos_update") then
+		self.coordX = message.pos.x
+		self.coordY = message.pos.y
+		
+	elseif message_id == hash("velocity_update") then
+		self.velocityX = message.velocity.x
+		self.velocityY = message.velocity.y
+	
+	elseif message_id == hash("scene_update") then 	
+	elseif message_id == hash("mute_update") then 
+		self.muted = message.muted
+	--elseif message_id == hash("grounded_update") then	
+	end
+end
+
+function on_input(self, action_id, action)
+	if action_id == input_debug then
+		if self.debug_on == 0 and action_id == hash("debug") and action.pressed then
+			local node = gui.get_node( "box" )
+			gui.set_color( node, vmath.vector4(0, 0, 0, 0) )
+			print("Debug off")
+			self.debug_on = 1
+			
+		elseif self.debug_on == 1 and action_id == hash("debug") and action.pressed then
+			local node = gui.get_node( "box" )
+			gui.set_color( node, vmath.vector4(1, 1, 1, 0.5) )
+			print("Debug on")
+			self.debug_on = 0
+			
+		end	
+			
+	elseif action_id == hash("debugp") and action.pressed then
+		msg.post("@system:", "toggle_physics_debug")
+	elseif action_id == input_nextlvl and action.pressed then
+		msg.post("worlds:/level_loader", "next_level")	
+	elseif action_id == input_lastlvl and action.pressed then
+		msg.post("worlds:/level_loader", "last_level")	
+	end
+end
+
+
+function update(self, dt)
+	local nodeCoords = gui.get_node( "coordinates" )
+	local nodeVelocity = gui.get_node( "velocity" )
+	--local nodeGrounded = gui.get_node( "grounded" )
+	local nodeScene = gui.get_node( "scene" )
+	local nodeCamera = gui.get_node( "camera" )
+	local nodeMuted = gui.get_node( "muted" )
+	
+	
+	-- Grounded oli kokoaja false? jätetetään pois.
+	--local isGrounded = "False"
+	--if self.grounded then
+	--	isGrounded = "True"
+	--end
+	--gui.set_text(nodeGrounded, string.format("Grounded: "..isGrounded ))
+	
+	gui.set_text(nodeCoords, string.format("Coordinates:    X:%d    Y:%d", self.coordX, self.coordY ))
+	gui.set_text(nodeVelocity, string.format("Velocity:    X:%d    Y:%d", self.velocityX, self.velocityY ))
+	gui.set_text(nodeScene, string.format("Scene: %d", self.scene ))
+	--gui.set_text(nodeCoords, string.format("Velocity: %d", self.velocity ))
+	gui.set_text(nodeCamera, string.format("Camera: %d", self.camera ))
+	gui.set_text(nodeMuted, string.format('Muted("m"): %s', self.muted ))
+end
+

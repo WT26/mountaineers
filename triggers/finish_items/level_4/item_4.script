@@ -1,0 +1,10 @@
+function init(self)
+    self.collected = false
+end
+
+function on_message(self, message_id, message, sender)
+    if self.collected == false and message_id == hash("collision_response") then
+        self.collected = true
+        msg.post("worlds:/level_loader", "next_level")
+    end	
+end

@@ -1,0 +1,348 @@
+-- these are the tweaks for the mechanics, feel free to change them for a different feeling
+-- the acceleration to move right/left
+go.property("move_acceleration", 3000)
+-- acceleration factor to use when air-borne
+go.property("air_acceleration_factor", 0.05)
+-- max speed right/left
+go.property("max_speed", 200)
+-- gravity pulling the player down in pixel units
+go.property("gravity", -1100)
+-- take-off speed when jumping in pixel units
+go.property("jump_takeoff_speed", 550)
+
+go.property("frames_to_disable_jump", 5)
+
+
+-- pre-hashing ids improves performance
+local msg_contact_point_response = hash("contact_point_response")
+local msg_animation_done = hash("animation_done")
+local group_geometry = hash("geometry")
+local input_left = hash("left")
+local input_left2 = hash("left2")
+local input_right = hash("right")
+local input_right2 = hash("right2")
+local input_jump = hash("jump")
+local input_jump2 = hash("jump2")
+local input_jump3 = hash("jump3")
+local anim_run = hash("walk")
+local anim_idle = hash("idle")
+local anim_jump = hash("jump")
+local anim_fall = hash("fall")
+
+function init(self)
+	-- this lets us handle input in this script
+	msg.post(".", "acquire_input_focus")
+	
+	-- initial player velocity
+	self.velocity = vmath.vector3(0, 0, 0)
+	-- support variable to keep track of collisions and separation
+	self.correction = vmath.vector3()
+	-- if the player stands on ground or not
+	self.ground_contact = false
+	-- movement input in the range [-1,1]
+	self.move_input = 0
+	-- character direction, for anim selection (-1 or 1)
+	self.direction = 1
+	-- the currently playing animation
+	self.anim = nil
+	-- timer that controls the jump-window when using mouse/touch
+	self.touch_jump_timer = 0
+	
+	self.enable_jump = false
+	self.jump_timer = 0
+	self.current_level = 1
+	self.key_pieces = 0
+	
+   	msg.post("worlds:/musicplayer#sfx_running","play_sound")
+   	
+   	msg.post("worlds:/level_loader#script", "which_level")
+   	
+   	
+end
+
+local function play_animation(self, anim)
+	-- only play animations which are not already playing
+	if self.anim ~= anim then
+		-- tell the sprite to play the animation
+		msg.post("#sprite", "play_animation", {id = anim})
+		-- remember which animation is playing
+		self.anim = anim
+	end
+end
+
+local function update_animations(self)
+	-- make sure the player character faces the right way
+	sprite.set_hflip("#sprite", self.direction < 0)
+	-- make sure the right animation is playing
+	if self.ground_contact then
+		if self.velocity.x == 0 then
+			play_animation(self, anim_idle)
+		else
+			play_animation(self, anim_run)
+		end
+	else
+		if self.velocity.y > 0 then
+			play_animation(self, anim_jump)
+		else
+			play_animation(self, anim_fall)
+		end
+	end
+end
+
+function update(self, dt)
+	if self.ground_contact then
+		self.enable_jump = true
+	end
+	if self.ground_contact == false and self.enable_jump == true then
+		self.jump_timer = self.jump_timer + 1
+	end
+	if self.jump_timer > self.frames_to_disable_jump then
+		self.jump_timer = 0
+		self.enable_jump = false
+	end
+
+	-- determine the target speed based on input
+	local target_speed = self.move_input * self.max_speed
+	-- calculate the difference between our current speed and the target speed
+	local speed_diff = target_speed - self.velocity.x
+	-- the complete acceleration to integrate over this frame
+	
+	if self.current_level == 6 then
+		self.gravity = self.gravity + 600
+		self.move_acceleration = 7000
+		--self.jump_takeoff_speed = self.jump_takeoff_speed + 10
+		
+		
+	elseif self.current_level == 8 then
+		if self.key_pieces == 0 then
+			self.gravity = -1100
+			sound.set_group_gain(hash("acoustic"), 0.6)
+			sound.set_group_gain(hash("saro"), 0.00001)
+			
+		elseif self.key_pieces == 1 then
+			self.gravity = -1200
+			sound.set_group_gain(hash("acoustic"), 0.46)
+			sound.set_group_gain(hash("saro"), 0.2)
+			
+		elseif self.key_pieces == 2 then
+			self.gravity = -1300
+			sound.set_group_gain(hash("acoustic"), 0.20)
+			sound.set_group_gain(hash("saro"), 0.46)
+			
+		elseif self.key_pieces == 3 then
+			self.gravity = -1500
+			sound.set_group_gain(hash("acoustic"), 0.00001)
+			sound.set_group_gain(hash("saro"), 0.75)
+			
+		elseif self.key_pieces == 4 then
+			self.gravity = -1100
+			sound.set_group_gain(hash("acoustic"), 0.5)
+			sound.set_group_gain(hash("saro"), 0.00001)
+		end
+	end
+	
+	
+	local acceleration = vmath.vector3(0, self.gravity, 0)
+	if speed_diff ~= 0 then
+		-- set the acceleration to work in the direction of the difference
+		if speed_diff < 0 then
+			acceleration.x = -self.move_acceleration
+		else
+			acceleration.x = self.move_acceleration
+		end
+		-- decrease the acceleration when air-borne to give a slower feel
+		if not self.ground_contact then
+			acceleration.x = self.air_acceleration_factor * acceleration.x
+		end
+	end
+	-- calculate the velocity change this frame (dv is short for delta-velocity)
+	local dv = acceleration * dt
+	-- check if dv exceeds the intended speed difference, clamp it in that case
+	if math.abs(dv.x) > math.abs(speed_diff) then
+		dv.x = speed_diff
+	end
+	-- save the current velocity for later use
+	-- (self.velocity, which right now is the velocity used the previous frame)
+	local v0 = self.velocity
+	-- calculate the new velocity by adding the velocity change
+	
+	self.velocity = self.velocity + dv
+	
+	if (self.move_input == 0) and self.ground_contact and self.velocity.x < 10 and self.velocity.y < 10 then
+		self.velocity.x = self.velocity.x * 0.005;
+		self.velocity.y = self.velocity.y * 0.005;
+	end
+	--if self.move_input == 0 and self.velocity.x == 0 then
+	--	self.velocity.y = self.velocity.y * 0.005;
+	--end
+	-- calculate the translation this frame by integrating the velocity
+	local dp = (v0 + self.velocity) * dt * 0.5
+	-- apply it to the player character
+	
+	
+	if self.current_level == 8 then
+		if self.key_pieces == 0 then
+			dp.x = dp.x * 1
+			
+		elseif self.key_pieces == 1 then
+			dp.x = dp.x * 0.8
+
+			
+		elseif self.key_pieces == 2 then
+			dp.x = dp.x * 0.6
+			
+			
+		elseif self.key_pieces == 3 then
+			dp.x = dp.x * 0.4
+
+			
+		elseif self.key_pieces == 4 then
+			dp.x = dp.x * 1
+
+		end
+	end
+	
+	go.set_position(go.get_position() + dp)
+
+
+	-- update the jump timer
+	--if self.touch_jump_timer > 0 then
+	--	self.touch_jump_timer = self.touch_jump_timer - dt
+	--end
+	
+	update_animations(self)
+	
+	play_running_sound(self)
+	
+	-- reset volatile state
+	self.correction = vmath.vector3()
+	self.move_input = 0
+	self.ground_contact = false
+	self.gravity = -1100
+
+	-- Send Stats to debug gui
+	local p = go.get_position()
+	msg.post("worlds:/gui_go", "pos_update", {pos = p})	
+	msg.post("worlds:/gui_go", "velocity_update", {velocity = self.velocity})	
+	msg.post("worlds:/gui_go", "grounded_update", {grounded = self.ground_contact})	
+end
+
+local function handle_geometry_contact(self, normal, distance)
+	-- project the correction vector onto the contact normal
+	-- (the correction vector is the 0-vector for the first contact point)
+	local proj = vmath.dot(self.correction, normal)
+	-- calculate the compensation we need to make for this contact point
+	local comp = (distance - proj) * normal
+	-- add it to the correction vector
+	self.correction = self.correction + comp
+	-- apply the compensation to the player character
+	go.set_position(go.get_position() + comp)
+	-- check if the normal points enough up to consider the player standing on the ground
+	-- (0.7 is roughly equal to 45 degrees deviation from pure vertical direction)
+	if normal.y > 0.7 then
+		self.ground_contact = true
+	else
+		self.gravity = self.gravity - 300
+	end
+	-- project the velocity onto the normal
+	proj = vmath.dot(self.velocity, normal)
+	-- if the projection is negative, it means that some of the velocity points towards the contact point
+	if proj < 0 then
+		-- remove that component in that case
+		self.velocity = self.velocity - proj * normal
+		self.velocity.y = self.velocity.y * 0.9;
+	end
+end
+
+function on_message(self, message_id, message, sender)
+	-- check if we received a contact point message
+	if message_id == msg_contact_point_response then
+		-- check that the object is something we consider geometry
+		if message.group == group_geometry then
+			handle_geometry_contact(self, message.normal, message.distance)
+		end
+	elseif message_id == hash("spawn") then
+		msg.post(".", "acquire_input_focus")
+		
+	elseif message_id == hash("die") then
+		if self.current_level == 4 or self.current_level == 6 then
+			local pos = go.get_position("respawn")
+			go.set_position(pos, "player")
+		elseif self.current_level == 8 then
+			local pos = go.get_position("respawn")
+			local pos2 = go.get_position("respawn1")
+			local pos3 = go.get_position("respawn2")
+			local pos4 = go.get_position("respawn3")
+			local pos5 = go.get_position("respawn4")
+			
+			local player_pos = go.get_position("player")
+			
+			if player_pos.x > pos5.x then
+				go.set_position(pos5, "player")
+			elseif player_pos.x > pos4.x then
+				go.set_position(pos4, "player")
+			elseif player_pos.x > pos3.x then
+				go.set_position(pos3, "player")
+			elseif player_pos.x > pos2.x then
+				go.set_position(pos2, "player")
+			else
+				go.set_position(pos, "player")
+			end		
+		elseif self.current_level == 10 then
+			local pos = go.get_position("respawn")
+			go.set_position(pos, "player")
+		end
+	elseif message_id == hash("cur_level") then
+		self.current_level = message.current
+	
+	elseif message_id == hash("get_piece") then
+		self.key_pieces = self.key_pieces + 1
+	end
+end
+
+local function jump(self)
+	-- only allow jump from ground
+	-- (extend this with a counter to do things like double-jumps)
+	if self.enable_jump then
+		-- set take-off speed
+		self.velocity.y = self.jump_takeoff_speed
+		-- play animation
+		msg.post("worlds:/musicplayer#sfx_jump","play_sound")
+		play_animation(self, anim_jump)
+  		--msg.post("worlds:/musicplayer#sfx_jumpproto","play_sound")
+  		--msg.post("worlds:/musicplayer#sfx_discovery","play_sound")	
+	end
+end
+
+local function abort_jump(self)
+	-- cut the jump short if we are still going up
+	if self.velocity.y > 0 then
+		-- scale down the upwards speed
+		self.velocity.y = self.velocity.y * 0.5
+	end
+end
+
+function on_input(self, action_id, action)
+	if action_id == input_left or action_id == input_left2 then
+		self.move_input = -action.value
+		self.direction = -1
+	elseif action_id == input_right or action_id == input_right2 then
+		self.move_input = action.value
+		self.direction = 1
+	elseif action_id == input_jump or action_id == input_jump2 or action_id == input_jump3 then
+		if action.pressed then
+			jump(self)
+		elseif action.released then
+			abort_jump(self)
+		end
+	end	
+end
+
+function play_running_sound(self)
+	if self.ground_contact == true and (self.velocity.x > 0 or self.velocity.x < 0) then
+		--msg.post("worlds:/musicplayer#sfx_jumpproto","play_sound")s
+		sound.set_group_gain(hash("running"), 1)
+	else
+		sound.set_group_gain(hash("running"), 0.0001)
+	end
+end

@@ -1,0 +1,22 @@
+function init(self)
+	self.current_level = 1
+	msg.post("worlds:/level_loader#script", "which_level")
+end
+
+function on_message(self, message_id, message, sender)
+    if message_id == hash("collision_response") then
+        if self.current_level == 4 then
+            msg.post("worlds:/musicplayer#sfx_splash","play_sound")
+        	msg.post("level1:/player", "die")	
+        elseif self.current_level == 6 then
+       		msg.post("level_2:/player", "die")	
+        elseif self.current_level == 8 then
+        	msg.post("level_3:/player", "die")	
+        elseif self.current_level == 10 then
+        	msg.post("level_4:/player", "die")	
+        end
+                
+    elseif message_id == hash("cur_level") then
+		self.current_level = message.current
+    end
+end

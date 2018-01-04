@@ -1,0 +1,109 @@
+function init(self)
+	msg.post("#camera", "acquire_camera_focus")
+	-- Track current position and where someone told us to look at.
+	
+	msg.post("worlds:/musicplayer", "start_level_4")
+	
+	self.pos = go.get_world_position()
+	self.look_at = self.pos
+    -- Store measured speed
+	self.speed = 0
+	
+	self.SCREEN_WIDTH = 1024
+	self.SCREEN_HEIGHT = 768
+	
+	self.LEVEL_WIDTH = 3000
+	self.BG_WIDTH = 2000
+	self.MG_WIDTH = 1500
+	self.FG_WIDTH = -10000
+	
+	self.offset = vmath.vector3(self.SCREEN_WIDTH *-0.5, self.SCREEN_HEIGHT *-0.5,0)
+	
+	self.minX = -5
+	self.maxX = 4930
+	self.minY = -5
+	self.maxY = 10000
+	--self.offset.z = 0
+end
+
+function update(self, dt)
+	
+	--local deltax = player_pos.x - go.get_world_position().x
+	--local deltay = player_pos.y - go.get_world_position().y
+	
+	--if deltax > (self.SCREEN_WIDTH*0.5) then
+	--	self.pos = vmath.lerp(0.03, self.pos, (player_pos + self.offset)*0.5)
+	--elseif deltay > (self.SCREEN_HEIGHT*0.4) then
+	--	self.pos = vmath.lerp(0.03, self.pos, (player_pos + self.offset)*0.5)
+	--end
+	
+	-- Camera in gameobject view is lerped to players position + offset
+	
+	local player_pos = go.get_position("player")
+	local camera_pos = go.get_position("view")
+	
+	self.pos = vmath.lerp(0.03, self.pos, player_pos + self.offset)
+	
+	-- X and Y values are clamped to min and max.
+	self.pos.x = clamp(self.pos.x , self.minX, self.maxX)
+	self.pos.y = clamp(self.pos.y, self.minY, self.maxY)
+
+--[[	
+	if self.pos.x > 4880 then
+		local player_pos = go.get_position("player")
+		--player_pos.y = player_pos.y - 3000
+
+		self.pos = vmath.lerp(0.03, self.pos, player_pos + self.offset )
+		self.pos.y = self.pos.y - 10
+		-- X and Y values are clamped to min and max.
+		self.pos.x = clamp(self.pos.x , self.minX, self.maxX)
+		self.pos.y = clamp(self.pos.y, self.minY, self.maxY)
+		
+		msg.post("worlds:/gui_go1", "pos_update", {pos = self.pos})	
+	else
+		self.pos = vmath.lerp(0.03, self.pos, player_pos + self.offset)
+		-- X and Y values are clamped to min and max.
+		self.pos.x = clamp(self.pos.x , self.minX, self.maxX)
+		self.pos.y = clamp(self.pos.y, self.minY, self.maxY)
+	end
+--]]
+	go.set_position(self.pos, "view")
+	
+	
+	-- Bg and fg movemet.. 
+	local bg_pos = go.get_position("background")
+	bg_pos.y = self.pos.y;
+	bg_pos.x = (self.BG_WIDTH / self.LEVEL_WIDTH)*(self.pos.x)
+	go.set_position(bg_pos, "background")
+	
+	
+	local mg_pos = go.get_position("middleground")
+	mg_pos.y = self.pos.y;
+	mg_pos.x = (self.MG_WIDTH / self.LEVEL_WIDTH)*(self.pos.x)
+	go.set_position(mg_pos, "middleground")
+	
+	
+	local fg_pos = go.get_position("foreground")
+	fg_pos.y = self.pos.y;
+	fg_pos.x = (self.FG_WIDTH / self.LEVEL_WIDTH) * (self.pos.x)
+	go.set_position(fg_pos, "foreground")
+	
+	
+end
+
+function on_message(self, message_id, message, sender)
+    -- This camera reacts to "look_at" messages with a position as where
+    -- to go.
+	if message_id == hash("look_at") then
+		self.look_at = message.position
+	end
+end
+
+function clamp (value , min , max)
+     if value < min then
+          value = min
+     elseif value > max then
+          value = max
+     end
+     return value
+end

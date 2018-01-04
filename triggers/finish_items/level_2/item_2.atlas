@@ -1,0 +1,9 @@
+images {
+  image: "/triggers/finish_items/level_2/images/key_07.png"
+}
+images {
+  image: "/triggers/finish_items/level_2/images/level_2_scarf.png"
+}
+margin: 0
+extrude_borders: 0
+inner_padding: 0

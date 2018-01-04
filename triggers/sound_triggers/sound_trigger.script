@@ -1,0 +1,52 @@
+go.property("sound_name", hash("sfx_jump"))
+
+function init(self)
+	self.played = false
+end
+
+function on_message(self, message_id, message, sender)
+    if self.played == false and message_id == hash("collision_response") then
+    
+    	if self.sound_name == hash("sfx_jump") then
+		   	msg.post("worlds:/musicplayer#sfx_jump", "play_sound")
+		   	
+		elseif self.sound_name == hash("sfx_birds") then
+		   	msg.post("worlds:/musicplayer#sfx_birds", "play_sound")
+		   	
+		elseif self.sound_name == hash("sfx_carcrash") then
+		   	msg.post("worlds:/musicplayer#sfx_carcrash", "play_sound")
+		   	
+		elseif self.sound_name == hash("sfx_discovery") then
+		   	msg.post("worlds:/musicplayer#sfx_discovery", "play_sound")
+		   	
+		elseif self.sound_name == hash("sfx_humina") then
+		   	msg.post("worlds:/musicplayer#sfx_humina", "play_sound")
+		   	
+		elseif self.sound_name == hash("sfx_monkey") then
+		   	msg.post("worlds:/musicplayer#sfx_monkey", "play_sound")
+		   	
+		elseif self.sound_name == hash("sfx_nature") then
+		   	msg.post("worlds:/musicplayer#sfx_nature", "play_sound")
+		   	
+		elseif self.sound_name == hash("sfx_running") then
+		   	msg.post("worlds:/musicplayer#sfx_running", "play_sound")
+		   	
+		elseif self.sound_name == hash("sfx_sade") then
+		   	msg.post("worlds:/musicplayer#sfx_sade", "play_sound")
+		   	
+		elseif self.sound_name == hash("sfx_splash") then
+		   	msg.post("worlds:/musicplayer#sfx_splash", "play_sound")
+		   	
+		elseif self.sound_name == hash("sfx_tiger") then
+		   	msg.post("worlds:/musicplayer#sfx_tiger", "play_sound")
+		   			   	
+		elseif self.sound_name == hash("sfx_volcano") then
+		   	msg.post("worlds:/musicplayer#sfx_volcano", "play_sound")
+		   	
+		elseif self.sound_name == hash("sfx_grasshopper") then
+		   	msg.post("worlds:/musicplayer#sfx_grasshopper", "play_sound")
+		   	
+		end
+		self.played = true
+    end
+end

@@ -1,0 +1,56 @@
+function init(self)
+	
+	self.clipX = 0
+	self.clipY = 0
+	
+	
+	local pos = vmath.vector3(512, 384, 0)	
+	local size = vmath.vector3(1024, 768, 0)
+	self.box_text_area = gui.new_box_node(pos, size)
+	local col = vmath.vector4(255, 255, 255, 0)
+	gui.set_color(self.box_text_area, col)
+	
+	gui.set_texture(self.box_text_area, "black")
+	
+	local pos = vmath.vector3(0, 0, 0)	
+	local size = vmath.vector3(366, 250, 0)
+	col = vmath.vector4(255, 255, 255, 0)
+	self.box_text_area_clipper = gui.new_box_node(pos, size)
+	gui.set_color(self.box_text_area_clipper, col)
+	
+	gui.set_clipping_mode(self.box_text_area_clipper, gui.CLIPPING_MODE_STENCIL)
+	
+	
+	msg.post(".", "acquire_input_focus")
+end
+
+
+function on_message(self, message_id, message, sender)
+	if message_id == hash("pos_update") then
+		self.clipX = message.pos.x
+		self.clipY = message.pos.y
+	end
+end
+
+
+
+function update(self, dt)--[[
+	if self.clipX < 5300 then
+		local col = vmath.vector4(255, 255, 255, 0)
+		gui.set_color(self.box_text_area, col)
+	elseif self.clipX > 5600 then
+		local num = 0.8
+		local col = vmath.vector4(255, 255, 255, num)
+		gui.set_color(self.box_text_area, col)
+	elseif self.clipX > 5300 then
+		local num = (-5600 + self.clipX) / 3 * 0.01 
+		if num > 0.8 then 
+			num = 0.8
+		end
+		local col = vmath.vector4(255, 255, 255, num)
+		gui.set_color(self.box_text_area, col)
+	
+	
+	end--]]
+end
+

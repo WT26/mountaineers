@@ -1,0 +1,199 @@
+function init(self)
+	
+	--msg.post("worlds:/musicplayer", "start_ending")
+	
+	self.endCounter = 0
+	
+	self.showGameBy = false
+	self.showGameByTint = 0
+	self.showCredits = false
+	self.showCreditsTint = 0
+	self.showEsc = false
+	self.showEscTint = 0
+	
+	local pos = vmath.vector3(512, 650, 0)
+	self.complete_text = "Thank you for playing."
+	self.thankyou = gui.new_text_node(pos, self.complete_text)
+	gui.set_pivot(self.thankyou, gui.PIVOT_N)
+	gui.set_font(self.thankyou, "thank_you")
+	col = vmath.vector4(0, 0, 0, 1)
+	gui.set_color(self.thankyou, col)
+	local siz = vmath.vector3(700, 0, 0)
+	gui.set_size(self.thankyou, siz)
+
+	local pos = vmath.vector3(512, 550, 0)
+	self.complete_text = "Game by:"
+	self.gameby = gui.new_text_node(pos, self.complete_text)
+	gui.set_pivot(self.gameby, gui.PIVOT_N)
+	gui.set_font(self.gameby, "names")
+	col = vmath.vector4(0, 0, 0, 0)
+	gui.set_color(self.gameby, col)
+	local siz = vmath.vector3(700, 0, 0)
+	gui.set_size(self.gameby, siz)
+
+	local pos = vmath.vector3(256, 400, 0)
+	self.complete_text = "Story"
+	self.story = gui.new_text_node(pos, self.complete_text)
+	gui.set_pivot(self.story, gui.PIVOT_N)
+	gui.set_font(self.story, "credits")
+	gui.set_line_break(self.story, true)
+	col = vmath.vector4(0, 0, 0, 0)
+	gui.set_color(self.story, col)
+	local siz = vmath.vector3(700, 0, 0)
+	gui.set_size(self.story, siz)
+	
+	local pos = vmath.vector3(256, 400, 0)
+	self.complete_text = "\nAhola Tuomas"
+	self.story2 = gui.new_text_node(pos, self.complete_text)
+	gui.set_pivot(self.story2, gui.PIVOT_N)
+	gui.set_font(self.story2, "names")
+	gui.set_line_break(self.story2, true)
+	col = vmath.vector4(0, 0, 0, 0)
+	gui.set_color(self.story2, col)
+	local siz = vmath.vector3(700, 0, 0)
+	gui.set_size(self.story2, siz)
+	
+	local pos = vmath.vector3(768, 400, 0)
+	self.complete_text = "Art"
+	self.art = gui.new_text_node(pos, self.complete_text)
+	gui.set_pivot(self.art, gui.PIVOT_N)
+	gui.set_font(self.art, "credits")
+	gui.set_line_break(self.art, true)
+	col = vmath.vector4(0, 0, 0, 0)
+	gui.set_color(self.art, col)
+	local siz = vmath.vector3(700, 0, 0)
+	gui.set_size(self.art, siz)
+	
+	local pos = vmath.vector3(768, 400, 0)
+	self.complete_text = "\nHarmainen Heikki & Vesa Markku"
+	self.art2 = gui.new_text_node(pos, self.complete_text)
+	gui.set_pivot(self.art2, gui.PIVOT_N)
+	gui.set_font(self.art2, "names")
+	gui.set_line_break(self.art2, true)
+	col = vmath.vector4(0, 0, 0, 0)
+	gui.set_color(self.art2, col)
+	local siz = vmath.vector3(700, 0, 0)
+	gui.set_size(self.art2, siz)
+	
+	local pos = vmath.vector3(256, 200, 0)
+	self.complete_text = "Programming"
+	self.prog = gui.new_text_node(pos, self.complete_text)
+	gui.set_pivot(self.prog, gui.PIVOT_N)
+	gui.set_font(self.prog, "credits")
+	gui.set_line_break(self.prog, true)
+	col = vmath.vector4(0, 0, 0, 0)
+	gui.set_color(self.prog, col)
+	local siz = vmath.vector3(700, 0, 0)
+	gui.set_size(self.prog, siz)
+	
+	local pos = vmath.vector3(256, 200, 0)
+	self.complete_text = "\nAlanko Joel"
+	self.prog2 = gui.new_text_node(pos, self.complete_text)
+	gui.set_pivot(self.prog2, gui.PIVOT_N)
+	gui.set_font(self.prog2, "names")
+	gui.set_line_break(self.prog2, true)
+	col = vmath.vector4(0, 0, 0, 0)
+	gui.set_color(self.prog2, col)
+	local siz = vmath.vector3(700, 0, 0)
+	gui.set_size(self.prog2, siz)
+	
+	local pos = vmath.vector3(768, 200, 0)
+	self.complete_text = "Music"
+	self.music = gui.new_text_node(pos, self.complete_text)
+	gui.set_pivot(self.music, gui.PIVOT_N)
+	gui.set_font(self.music, "credits")
+	gui.set_line_break(self.music, true)
+	col = vmath.vector4(0, 0, 0, 0)
+	gui.set_color(self.music, col)
+	local siz = vmath.vector3(700, 0, 0)
+	gui.set_size(self.music, siz)
+	
+	local pos = vmath.vector3(768, 200, 0)
+	self.complete_text = "\nPuronlahti Matias"
+	self.music2 = gui.new_text_node(pos, self.complete_text)
+	gui.set_pivot(self.music2, gui.PIVOT_N)
+	gui.set_font(self.music2, "names")
+	gui.set_line_break(self.music2, true)
+	col = vmath.vector4(0, 0, 0, 0)
+	gui.set_color(self.music2, col)
+	local siz = vmath.vector3(700, 0, 0)
+	gui.set_size(self.music2, siz)
+	
+	
+	
+	local pos = vmath.vector3(512, 50, 0)
+	self.complete_text = "Press 'Esc' To Quit"
+	self.esc = gui.new_text_node(pos, self.complete_text)
+	gui.set_pivot(self.esc, gui.PIVOT_N)
+	gui.set_font(self.esc, "names")
+	col = vmath.vector4(0, 0, 0, 0)
+	gui.set_color(self.esc, col)
+	local siz = vmath.vector3(700, 0, 0)
+	gui.set_size(self.esc, siz)
+	
+	
+
+	msg.post(".", "acquire_input_focus")
+	
+end
+
+
+function on_input(self, action_id, action)	
+	if (action_id == input_jump or action_id == input_jump2) then
+	end
+end
+
+
+function update(self, dt)
+
+	self.endCounter = self.endCounter + 1	
+	if self.endCounter > 120 then
+		self.showGameBy = true
+	end
+	
+	if self.endCounter > 180 then
+		self.showCredits = true
+	end
+		
+	if self.endCounter > 360 then
+		self.showEsc = true
+	end
+	
+	
+	if self.showGameBy == true then
+		self.showGameByTint = self.showGameByTint + 0.008
+		if self.showGameByTint > 1 then
+			self.showGameByTint = 1
+		end
+		local col = gui.get_color(self.gameby)
+		col.w = self.showGameByTint
+		gui.set_color(self.gameby, col)
+	end
+	
+	if self.showCredits == true then
+		self.showCreditsTint = self.showCreditsTint + 0.008
+		if self.showCreditsTint > 1 then
+			self.showCreditsTint = 1
+		end
+		local col = gui.get_color(self.art)
+		col.w = self.showCreditsTint
+		gui.set_color(self.art, col)
+		gui.set_color(self.art2, col)
+		gui.set_color(self.music, col)
+		gui.set_color(self.music2, col)
+		gui.set_color(self.prog, col)
+		gui.set_color(self.prog2, col)
+		gui.set_color(self.story, col)
+		gui.set_color(self.story2, col)		
+	end
+	
+	if self.showEsc == true then
+		self.showEscTint = self.showEscTint + 0.008
+		if self.showEscTint > 1 then
+			self.showEscTint = 1
+		end
+		local col = gui.get_color(self.esc)
+		col.w = self.showEscTint
+		gui.set_color(self.esc, col)
+	end
+end

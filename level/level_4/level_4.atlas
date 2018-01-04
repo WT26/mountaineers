@@ -1,0 +1,202 @@
+images {
+  image: "/level/level_4/images/ground3.png"
+}
+images {
+  image: "/level/level_4/images/ice_background.png"
+}
+images {
+  image: "/level/level_4/images/ice_flame1.png"
+}
+images {
+  image: "/level/level_4/images/ice_flame2.png"
+}
+images {
+  image: "/level/level_4/images/ice_flame3.png"
+}
+images {
+  image: "/level/level_4/images/ice_foreground1.png"
+}
+images {
+  image: "/level/level_4/images/ice_foreground2.png"
+}
+images {
+  image: "/level/level_4/images/ice_foreground3.png"
+}
+images {
+  image: "/level/level_4/images/ice_foreground4.png"
+}
+images {
+  image: "/level/level_4/images/ice_ground1.png"
+}
+images {
+  image: "/level/level_4/images/ice_ground10.png"
+}
+images {
+  image: "/level/level_4/images/ice_ground11.png"
+}
+images {
+  image: "/level/level_4/images/ice_ground12.png"
+}
+images {
+  image: "/level/level_4/images/ice_ground13.png"
+}
+images {
+  image: "/level/level_4/images/ice_ground14.png"
+}
+images {
+  image: "/level/level_4/images/ice_ground2.png"
+}
+images {
+  image: "/level/level_4/images/ice_ground3.png"
+}
+images {
+  image: "/level/level_4/images/ice_ground4.png"
+}
+images {
+  image: "/level/level_4/images/ice_ground5.png"
+}
+images {
+  image: "/level/level_4/images/ice_ground6.png"
+}
+images {
+  image: "/level/level_4/images/ice_ground7.png"
+}
+images {
+  image: "/level/level_4/images/ice_ground8.png"
+}
+images {
+  image: "/level/level_4/images/ice_ground9.png"
+}
+images {
+  image: "/level/level_4/images/ice_platform.png"
+}
+images {
+  image: "/level/level_4/images/ice_platform_large.png"
+}
+images {
+  image: "/level/level_4/images/ice_spark1.png"
+}
+images {
+  image: "/level/level_4/images/ice_spark2.png"
+}
+images {
+  image: "/level/level_4/images/ice_spark3.png"
+}
+images {
+  image: "/level/level_4/images/ice_spike1.png"
+}
+images {
+  image: "/level/level_4/images/ice_spike2.png"
+}
+images {
+  image: "/level/level_4/images/ice_spike3.png"
+}
+images {
+  image: "/level/level_4/images/ice_spikeball.png"
+}
+images {
+  image: "/level/level_4/images/ice_volcano.png"
+}
+images {
+  image: "/level/level_4/images/girlandmedic1.png"
+}
+images {
+  image: "/level/level_4/images/girlandmedic2.png"
+}
+images {
+  image: "/level/level_4/images/girlandmedic3.png"
+}
+images {
+  image: "/level/level_4/images/girlandmedic4.png"
+}
+images {
+  image: "/level/level_4/images/girlandmedic5.png"
+}
+images {
+  image: "/level/level_4/images/girlandmedic6.png"
+}
+animations {
+  id: "icevolcano"
+  images {
+    image: "/level/level_4/images/icevolcano1.png"
+  }
+  images {
+    image: "/level/level_4/images/icevolcano2.png"
+  }
+  images {
+    image: "/level/level_4/images/icevolcano3.png"
+  }
+  images {
+    image: "/level/level_4/images/icevolcano4.png"
+  }
+  playback: PLAYBACK_LOOP_FORWARD
+  fps: 4
+  flip_horizontal: 0
+  flip_vertical: 0
+}
+animations {
+  id: "icespikes1"
+  images {
+    image: "/level/level_4/images/icespike1.png"
+  }
+  images {
+    image: "/level/level_4/images/icespike2.png"
+  }
+  images {
+    image: "/level/level_4/images/icespike3.png"
+  }
+  images {
+    image: "/level/level_4/images/icespike4.png"
+  }
+  playback: PLAYBACK_LOOP_FORWARD
+  fps: 4
+  flip_horizontal: 0
+  flip_vertical: 0
+}
+animations {
+  id: "icespikes2"
+  images {
+    image: "/level/level_4/images/icespike5.png"
+  }
+  images {
+    image: "/level/level_4/images/icespike6.png"
+  }
+  images {
+    image: "/level/level_4/images/icespike7.png"
+  }
+  images {
+    image: "/level/level_4/images/icespike8.png"
+  }
+  playback: PLAYBACK_LOOP_FORWARD
+  fps: 4
+  flip_horizontal: 0
+  flip_vertical: 0
+}
+animations {
+  id: "girlandmedic"
+  images {
+    image: "/level/level_4/images/girlandmedic1.png"
+  }
+  images {
+    image: "/level/level_4/images/girlandmedic2.png"
+  }
+  images {
+    image: "/level/level_4/images/girlandmedic3.png"
+  }
+  images {
+    image: "/level/level_4/images/girlandmedic4.png"
+  }
+  images {
+    image: "/level/level_4/images/girlandmedic5.png"
+  }
+  images {
+    image: "/level/level_4/images/girlandmedic6.png"
+  }
+  playback: PLAYBACK_LOOP_FORWARD
+  fps: 4
+  flip_horizontal: 0
+  flip_vertical: 0
+}
+margin: 0
+extrude_borders: 0
+inner_padding: 0

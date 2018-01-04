@@ -1,0 +1,46 @@
+images {
+  image: "/triggers/collectable/key_pieces/images/key_01.png"
+}
+images {
+  image: "/triggers/collectable/key_pieces/images/key_03.png"
+}
+images {
+  image: "/triggers/collectable/key_pieces/images/key_05.png"
+}
+images {
+  image: "/triggers/collectable/key_pieces/images/key_06.png"
+}
+images {
+  image: "/triggers/collectable/key_pieces/images/lava_itemglow.png"
+}
+images {
+  image: "/triggers/collectable/key_pieces/images/lava_itemglow1.png"
+}
+images {
+  image: "/triggers/collectable/key_pieces/images/lava_itemglow2.png"
+}
+images {
+  image: "/triggers/collectable/key_pieces/images/lava_itemglow3.png"
+}
+animations {
+  id: "itemglow"
+  images {
+    image: "/triggers/collectable/key_pieces/images/lava_itemglow.png"
+  }
+  images {
+    image: "/triggers/collectable/key_pieces/images/lava_itemglow1.png"
+  }
+  images {
+    image: "/triggers/collectable/key_pieces/images/lava_itemglow2.png"
+  }
+  images {
+    image: "/triggers/collectable/key_pieces/images/lava_itemglow3.png"
+  }
+  playback: PLAYBACK_LOOP_FORWARD
+  fps: 4
+  flip_horizontal: 0
+  flip_vertical: 0
+}
+margin: 0
+extrude_borders: 0
+inner_padding: 0

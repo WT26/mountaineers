@@ -1,0 +1,155 @@
+go.property("speed", 6)
+
+function init(self)
+	self.current_level = 1
+	msg.post("worlds:/level_loader#script", "which_level")
+end
+
+function update(self, dt)
+    if self.current_level == 8 then    
+ 		local pos = go.get_position("spikeball")
+ 		
+    	if pos.y < -200 then
+        	pos.y = 1300
+        	go.set_position(pos, "spikeball")
+    	end
+    	pos.y = pos.y - self.speed
+    	go.set_position(pos, "spikeball")
+    	
+    	
+    	local pos = go.get_position("spikeball1")
+    	if pos.y < -200 then
+        	pos.y = 1300
+        	go.set_position(pos, "spikeball1")
+    	end
+    	pos.y = pos.y - self.speed
+    	go.set_position(pos, "spikeball1")
+    	
+    	
+    	local pos = go.get_position("spikeball2")
+    	if pos.y < -200 then
+        	pos.y = 1300
+        	go.set_position(pos, "spikeball2")
+    	end
+    	pos.y = pos.y - self.speed
+    	go.set_position(pos, "spikeball2")
+    	
+    	local pos = go.get_position("spikeball3")
+    	if pos.y < -200 then
+        	pos.y = 1300
+        	go.set_position(pos, "spikeball3")
+    	end
+    	pos.y = pos.y - self.speed
+    	go.set_position(pos, "spikeball3")
+    	
+    	local pos = go.get_position("spikeball4")
+    	if pos.y < -200 then
+        	pos.y = 1300
+        	go.set_position(pos, "spikeball4")
+    	end
+    	pos.y = pos.y - self.speed
+    	go.set_position(pos, "spikeball4")
+        		
+        		
+        local pos = go.get_position("spikeball5")
+    	if pos.y < -200 then
+        	pos.y = 1300
+        	go.set_position(pos, "spikeball5")
+    	end
+    	pos.y = pos.y - self.speed
+    	go.set_position(pos, "spikeball5")
+    	
+    	local pos = go.get_position("spikeball6")
+    	if pos.y < -200 then
+        	pos.y = 1300
+        	go.set_position(pos, "spikeball6")
+    	end
+    	pos.y = pos.y - self.speed
+    	go.set_position(pos, "spikeball6")
+    	
+    elseif self.current_level == 10 then
+     	msg.post("spikeball#sprite", "play_animation", { id = hash("ice") })
+ 	    msg.post("spikeball1#sprite", "play_animation", { id = hash("ice") })
+ 	    msg.post("spikeball2#sprite", "play_animation", { id = hash("ice") })
+ 	    msg.post("spikeball3#sprite", "play_animation", { id = hash("ice") })
+ 	    msg.post("spikeball4#sprite", "play_animation", { id = hash("ice") })
+ 	    msg.post("spikeball5#sprite", "play_animation", { id = hash("ice") })
+ 	    msg.post("spikeball7#sprite", "play_animation", { id = hash("ice") })
+     	
+    	msg.post("spikeball6#sprite", "play_animation", { id = hash("ice") })
+    	
+    	local pos = go.get_position("spikeball")
+ 		
+    	if pos.y < -200 then
+        	pos.y = 1300
+        	go.set_position(pos, "spikeball")
+    	end
+    	pos.y = pos.y - self.speed
+    	go.set_position(pos, "spikeball")
+    	
+    	
+    	local pos = go.get_position("spikeball1")
+    	if pos.y < -200 then
+        	pos.y = 1300
+        	go.set_position(pos, "spikeball1")
+    	end
+    	pos.y = pos.y - self.speed
+    	go.set_position(pos, "spikeball1")
+    	
+    	
+    	local pos = go.get_position("spikeball2")
+    	if pos.y < -200 then
+        	pos.y = 1300
+        	go.set_position(pos, "spikeball2")
+    	end
+    	pos.y = pos.y - self.speed
+    	go.set_position(pos, "spikeball2")
+    	
+    	local pos = go.get_position("spikeball3")
+    	if pos.y < -200 then
+        	pos.y = 1300
+        	go.set_position(pos, "spikeball3")
+    	end
+    	pos.y = pos.y - self.speed
+    	go.set_position(pos, "spikeball3")
+    	
+    	local pos = go.get_position("spikeball4")
+    	if pos.y < -200 then
+        	pos.y = 1300
+        	go.set_position(pos, "spikeball4")
+    	end
+    	pos.y = pos.y - self.speed
+    	go.set_position(pos, "spikeball4")
+        		
+        		
+        local pos = go.get_position("spikeball5")
+    	if pos.y < -200 then
+        	pos.y = 1300
+        	go.set_position(pos, "spikeball5")
+    	end
+    	pos.y = pos.y - self.speed
+    	go.set_position(pos, "spikeball5")
+    	
+    	local pos = go.get_position("spikeball6")
+    	if pos.y < -200 then
+        	pos.y = 1300
+        	go.set_position(pos, "spikeball6")
+    	end
+    	pos.y = pos.y - self.speed
+    	go.set_position(pos, "spikeball6")	
+    	
+    	local pos = go.get_position("spikeball7")
+    	if pos.y < -200 then
+        	pos.y = 1300
+        	go.set_position(pos, "spikeball7")
+    	end
+    	pos.y = pos.y - self.speed
+    	go.set_position(pos, "spikeball7")	
+    end
+end
+
+function on_message(self, message_id, message, sender)
+    if message_id == hash("cur_level") then
+		self.current_level = message.current
+    end
+end

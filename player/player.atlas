@@ -1,0 +1,82 @@
+images {
+  image: "/player/images/playerwalk1.png"
+}
+images {
+  image: "/player/images/playerwalk3.png"
+}
+images {
+  image: "/player/images/playerwalk4.png"
+}
+images {
+  image: "/player/images/playerwalk5.png"
+}
+images {
+  image: "/player/images/playerwalk6.png"
+}
+images {
+  image: "/player/images/playerwalk2.png"
+}
+animations {
+  id: "idle"
+  images {
+    image: "/player/images/player.png"
+  }
+  playback: PLAYBACK_LOOP_FORWARD
+  fps: 30
+  flip_horizontal: 0
+  flip_vertical: 0
+}
+animations {
+  id: "walk"
+  images {
+    image: "/player/images/playerwalk1.png"
+  }
+  images {
+    image: "/player/images/playerwalk2.png"
+  }
+  images {
+    image: "/player/images/playerwalk3.png"
+  }
+  images {
+    image: "/player/images/playerwalk4.png"
+  }
+  images {
+    image: "/player/images/playerwalk5.png"
+  }
+  images {
+    image: "/player/images/playerwalk6.png"
+  }
+  images {
+    image: "/player/images/playerwalk7.png"
+  }
+  images {
+    image: "/player/images/playerwalk8.png"
+  }
+  playback: PLAYBACK_LOOP_FORWARD
+  fps: 12
+  flip_horizontal: 0
+  flip_vertical: 0
+}
+animations {
+  id: "jump"
+  images {
+    image: "/player/images/playerwalk7.png"
+  }
+  playback: PLAYBACK_LOOP_FORWARD
+  fps: 30
+  flip_horizontal: 0
+  flip_vertical: 0
+}
+animations {
+  id: "fall"
+  images {
+    image: "/player/images/playerwalk7.png"
+  }
+  playback: PLAYBACK_LOOP_FORWARD
+  fps: 30
+  flip_horizontal: 0
+  flip_vertical: 0
+}
+margin: 0
+extrude_borders: 0
+inner_padding: 0

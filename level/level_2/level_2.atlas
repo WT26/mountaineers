@@ -1,0 +1,64 @@
+images {
+  image: "/level/level_2/images/ground1.png"
+}
+images {
+  image: "/level/level_2/images/level_2_bg.png"
+}
+images {
+  image: "/level/level_2/images/level_2_mg.png"
+}
+images {
+  image: "/level/level_2/images/level_2_fg_1.png"
+}
+images {
+  image: "/level/level_2/images/level_2_mg_2.png"
+}
+images {
+  image: "/level/level_2/images/level_2_mg_3.png"
+}
+images {
+  image: "/level/level_2/images/level_2_fg_2.png"
+}
+images {
+  image: "/level/level_2/images/level_2_fg_3.png"
+}
+images {
+  image: "/level/level_2/images/level_2_fg_4.png"
+}
+images {
+  image: "/level/level_2/images/tree_21.png"
+}
+images {
+  image: "/level/level_2/images/tree_22.png"
+}
+animations {
+  id: "buttfliers"
+  images {
+    image: "/level/level_2/images/flies1.png"
+  }
+  images {
+    image: "/level/level_2/images/flies2.png"
+  }
+  images {
+    image: "/level/level_2/images/flies3.png"
+  }
+  images {
+    image: "/level/level_2/images/flies4.png"
+  }
+  images {
+    image: "/level/level_2/images/flies5.png"
+  }
+  images {
+    image: "/level/level_2/images/flies6.png"
+  }
+  images {
+    image: "/level/level_2/images/flies7.png"
+  }
+  playback: PLAYBACK_LOOP_FORWARD
+  fps: 10
+  flip_horizontal: 0
+  flip_vertical: 0
+}
+margin: 0
+extrude_borders: 0
+inner_padding: 0
